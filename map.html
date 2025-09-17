@@ -108,6 +108,9 @@
   </div>
   <div id="tooltip"></div>
   <script>
+    let currentOpenTooltip = null;
+    let currentOpenMarker = null;
+
     // Main function to initialize the map and load data
     async function initialize() {
       try {
@@ -124,6 +127,15 @@
         const map = new google.maps.Map(document.getElementById('map'), {
           zoom: 2,
           center: {lat: 30, lng: 50},
+        });
+
+        // Close any open tooltip when the map is clicked
+        map.addListener('click', () => {
+          if (currentOpenTooltip) {
+            currentOpenTooltip.style.display = 'none';
+            currentOpenTooltip = null;
+            currentOpenMarker = null;
+          }
         });
 
         const geocoder = new google.maps.Geocoder();
@@ -207,15 +219,41 @@
           });
           const tooltip = document.getElementById('tooltip');
 
+          marker.addListener('click', (e) => {
+            // Close previously open tooltip if it's not the same marker
+            if (currentOpenTooltip && currentOpenMarker !== marker) {
+              currentOpenTooltip.style.display = 'none';
+            }
+            
+            // Toggle current marker's tooltip
+            if (tooltip.style.display === 'block') {
+              tooltip.style.display = 'none';
+              currentOpenTooltip = null;
+              currentOpenMarker = null;
+            } else {
+              tooltip.innerHTML = `<strong>${item.year}</strong><br>${item.place}`;
+              tooltip.style.display = 'block';
+              tooltip.style.left = (e.domEvent.clientX + 15) + 'px';
+              tooltip.style.top = (e.domEvent.clientY) + 'px';
+              currentOpenTooltip = tooltip;
+              currentOpenMarker = marker;
+            }
+          });
+
+          // Optional: Keep mouseover/mouseout for desktop experience
           marker.addListener('mouseover', (e) => {
-            tooltip.innerHTML = `<strong>${item.year}</strong><br>${item.place}`;
-            tooltip.style.display = 'block';
-            tooltip.style.left = (e.domEvent.clientX + 15) + 'px';
-            tooltip.style.top = (e.domEvent.clientY) + 'px';
+            if (currentOpenMarker !== marker) { // Only show if not already clicked
+              tooltip.innerHTML = `<strong>${item.year}</strong><br>${item.place}`;
+              tooltip.style.display = 'block';
+              tooltip.style.left = (e.domEvent.clientX + 15) + 'px';
+              tooltip.style.top = (e.domEvent.clientY) + 'px';
+            }
           });
 
           marker.addListener('mouseout', () => {
-            tooltip.style.display = 'none';
+            if (currentOpenMarker !== marker) { // Only hide if not clicked
+              tooltip.style.display = 'none';
+            }
           });
 
         } else {
