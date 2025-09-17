@@ -233,8 +233,27 @@
             } else {
               tooltip.innerHTML = `<strong>${item.year}</strong><br>${item.place}`;
               tooltip.style.display = 'block';
-              tooltip.style.left = (e.domEvent.clientX + 15) + 'px';
-              tooltip.style.top = (e.domEvent.clientY) + 'px';
+              
+              // Intelligent positioning
+              let topPos = e.domEvent.clientY - tooltip.offsetHeight - 10; // 10px offset above
+              let leftPos = e.domEvent.clientX + 15; // 15px offset to the right
+
+              // Adjust if it goes off top
+              if (topPos < 0) {
+                  topPos = 10; // Stick to top with 10px margin
+              }
+
+              // Adjust if it goes off right
+              if (leftPos + tooltip.offsetWidth > window.innerWidth) {
+                  leftPos = e.domEvent.clientX - tooltip.offsetWidth - 15; // Position to the left
+                  if (leftPos < 0) { // If it still goes off left
+                      leftPos = 10; // Stick to left with 10px margin
+                  }
+              }
+
+              tooltip.style.top = topPos + 'px';
+              tooltip.style.left = leftPos + 'px';
+
               currentOpenTooltip = tooltip;
               currentOpenMarker = marker;
             }
@@ -245,8 +264,26 @@
             if (currentOpenMarker !== marker) { // Only show if not already clicked
               tooltip.innerHTML = `<strong>${item.year}</strong><br>${item.place}`;
               tooltip.style.display = 'block';
-              tooltip.style.left = (e.domEvent.clientX + 15) + 'px';
-              tooltip.style.top = (e.domEvent.clientY) + 'px';
+              
+              // Intelligent positioning
+              let topPos = e.domEvent.clientY - tooltip.offsetHeight - 10; // 10px offset above
+              let leftPos = e.domEvent.clientX + 15; // 15px offset to the right
+
+              // Adjust if it goes off top
+              if (topPos < 0) {
+                  topPos = 10; // Stick to top with 10px margin
+              }
+
+              // Adjust if it goes off right
+              if (leftPos + tooltip.offsetWidth > window.innerWidth) {
+                  leftPos = e.domEvent.clientX - tooltip.offsetWidth - 15; // Position to the left
+                  if (leftPos < 0) { // If it still goes off left
+                      leftPos = 10; // Stick to left with 10px margin
+                  }
+              }
+
+              tooltip.style.top = topPos + 'px';
+              tooltip.style.left = leftPos + 'px';
             }
           });
 
