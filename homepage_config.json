@@ -1,0 +1,56 @@
+{
+  "title": {
+    "text": "陳主惠老師紀念網頁",
+    "styles": {
+      "font-size": "3.5rem",
+      "margin-bottom": "5px"
+    }
+  },
+  "subtitle": {
+    "text": "紀念一位熱愛旅遊、探索世界，深受大家喜愛的老師。",
+    "styles": {
+      "font-size": "1.2rem",
+      "margin-bottom": "25px"
+    }
+  },
+  "layout": {
+    "justify-content": "flex-end",
+    "align-items": "center",
+    "flex-direction": "column",
+    "padding-bottom": "8%"
+  },
+  "links": [
+    {
+      "text": "世界地圖",
+      "url": "map.html",
+      "is_external": false,
+      "styles": {
+        "padding": "30px 30px"
+      }
+    },
+    {
+      "text": "指導過的論文",
+      "url": "theses.html",
+      "is_external": false,
+      "styles": {
+        "padding": "30px 30px"
+      }
+    },
+    {
+      "text": "精彩的人生",
+      "url": "life.html",
+      "is_external": false,
+      "styles": {
+        "padding": "15px 30px"
+      }
+    },
+    {
+      "text": "來自大家的感恩",
+      "url": "https://www.kudoboard.com/boards/q3MWBn65",
+      "is_external": true,
+      "styles": {
+        "padding": "15px 15px"
+      }
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>精彩的人生</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f4f4f9;
+      padding: 40px 20px;
+      margin: 0;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 { color: #2c3e50; }
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #e67e22;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: white;
+      border: 4px solid #e67e22;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .left {
+      left: 0;
+    }
+    .right {
+      left: 50%;
+    }
+    .right::after {
+      left: -16px;
+    }
+    .content {
+      padding: 20px 30px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .content h2 {
+      margin-top: 0;
+      color: #34495e;
+    }
+    .home-link {
+      display: inline-block;
+      margin-top: 30px;
+      color: #3498db;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>精彩的人生</h1>
+    <a href="index.html" class="home-link">&larr; 返回首頁</a>
+  </div>
+  
+  <!-- Timeline container -->
+  <div class="timeline" id="timeline-container"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('life_events.json')
+        .then(response => response.json())
+        .then(data => {
+          const container = document.getElementById('timeline-container');
+          let timelineHtml = '';
+          data.forEach((item, index) => {
+            const side = index % 2 === 0 ? 'left' : 'right';
+            timelineHtml += `
+              <div class="timeline-item ${side}">
+                <div class="content">
+                  <h2>${item.year}</h2>
+                  <p>${item.event}</p>
+                </div>
+              </div>
+            `;
+          });
+          container.innerHTML = timelineHtml;
+        })
+        .catch(error => {
+          console.error('Error loading timeline data:', error);
+          const container = document.getElementById('timeline-container');
+          container.innerHTML = '<p style="text-align:center;">無法載入時間軸資料。</p>';
+        });
+    });
+  </script>
+</body>
+</html>
