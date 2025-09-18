@@ -44,7 +44,8 @@
     }
   ],
   "theses": [
-    {"year": "88", "student": "李文生", "title": "未飽和層土壤水力傳導與熱傳導裸土蒸發模式之研究"},
+    {"year": "85", "student": "羅偉誠, Lo, W-C", "title": "The Fractal Dimension of a Porous Medium Based on Oil-Water Displacement Experiments, Master Thesis, Cornell University, 1996."},
+	{"year": "88", "student": "李文生", "title": "未飽和層土壤水力傳導與熱傳導裸土蒸發模式之研究"},
     {"year": "88", "student": "詹益璋", "title": "結合專家系統暨應用空間統計方法所建立之水文地質分層結構"},
     {"year": "89", "student": "李繼尊", "title": "地表水流量序率模式預測與地下水水文地質參數模擬之研究"},
     {"year": "89", "student": "周哲正", "title": "模擬退火演算法在地下水參數分區與抽水量率定之應用"},
