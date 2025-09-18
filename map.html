@@ -1,312 +1,240 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
-  <title>旅遊足跡地圖</title>
-  <meta charset="UTF-8">
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background-color: #f4f4f9;
-    }
-    .header {
-      text-align: center;
-      padding: 10px 20px;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-    h1 {
-      color: #2c3e50;
-      margin: 0;
-    }
-    .home-link {
-      position: absolute;
-      left: 20px;
-      font-size: 1rem;
-      color: #3498db;
-      text-decoration: none;
-    }
-    .home-link:hover {
-      text-decoration: underline;
-    }
-    #main-container {
-      display: flex;
-      width: 95%;
-      max-width: 1600px;
-      margin: 20px auto;
-      gap: 20px;
-    }
-    #map-container {
-      flex: 3;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    #map {
-      height: 78vh;
-      width: 100%;
-      border-radius: 5px;
-    }
-    #info-panel {
-      flex: 1;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      height: calc(78vh + 40px); /* Match map container height */
-      overflow-y: auto;
-    }
-    #info-panel h2 {
-      color: #34495e;
-      border-bottom: 2px solid #ecf0f1;
-      padding-bottom: 10px;
-      margin-top: 0;
-    }
-    #info-panel h3 {
-      color: #e67e22;
-    }
-    #yearly-list ul {
-      list-style-type: none;
-      padding-left: 5px;
-    }
-    #yearly-list li {
-      margin-bottom: 5px;
-      color: #333;
-    }
-    #tooltip {
-      display: none;
-      position: absolute;
-      background: white;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      z-index: 1000;
-      pointer-events: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界足跡地圖</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            background-color: #f0f2f5; /* A slightly grey background */
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        .main-header {
+            text-align: center;
+            padding: 1rem;
+            background-color: #ffffff;
+            border-bottom: 1px solid #dee2e6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            flex-shrink: 0; /* Prevent header from shrinking */
+        }
+        .main-header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        .home-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .home-link:hover {
+            text-decoration: underline;
+        }
+        #main-content {
+            flex-grow: 1;
+            padding: 1rem;
+            overflow: hidden; /* Prevent scrollbars on the main content itself */
+        }
+        #container {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            gap: 1rem; /* Add space between map and info panel */
+        }
+        #map, #info-panel {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 1px solid #dee2e6;
+        }
+        #map {
+            height: 100%;
+            width: 70%;
+        }
+        #info-panel {
+            width: 30%;
+            height: 100%;
+            overflow-y: auto;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+        }
+        #stats {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
+        }
+        #stats p {
+            margin: 5px 0;
+        }
+        #yearly-list h2 {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: #007bff;
+        }
+        #yearly-list ul {
+            list-style-type: none;
+            padding-left: 10px;
+        }
+        #yearly-list li {
+            margin-bottom: 5px;
+        }
+        .loader {
+            padding: 20px;
+            text-align: center;
+            font-style: italic;
+            color: #6c757d;
+        }
+
+        /* Responsive Design for mobile devices */
+        @media (max-width: 768px) {
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+            #main-content {
+                padding: 0.5rem;
+            }
+            #container {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            #map {
+                width: 100%;
+                height: 45%; /* Adjust height for mobile */
+            }
+            #info-panel {
+                width: 100%;
+                height: 55%; /* Adjust height for mobile */
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="header">
-    <a href="index.html" class="home-link">&larr; 返回首頁</a>
-    <h1>陳主惠和鄭亞薇的世界地圖</h1>
-  </div>
-  <div id="main-container">
-    <div id="map-container">
-      <div id="map"></div>
-    </div>
-    <div id="info-panel">
-      <div id="summary"></div>
-      <div id="yearly-list"></div>
-    </div>
-  </div>
-  <div id="tooltip"></div>
-  <script>
-    let currentOpenTooltip = null;
-    let currentOpenMarker = null;
 
-    // Main function to initialize the map and load data
-    async function initialize() {
-      try {
-        const response = await fetch('travel_data.json');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const travelData = await response.json();
-        
-        // Populate the info panel with statistics and lists
-        updateInfoPanel(travelData);
+    <header class="main-header">
+        <h1 id="page-title">讀取中...</h1>
+        <a href="index.html" class="home-link">&larr; 返回首頁</a>
+    </header>
 
-        // Initialize the map
-        const map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 2,
-          center: {lat: 30, lng: 50},
+    <main id="main-content">
+        <div id="container">
+            <div id="map"></div>
+            <div id="info-panel">
+                <div id="stats">
+                    <p>國家總數: <span id="country-count">0</span></p>
+                    <p>地點總數: <span id="location-count">0</span></p>
+                </div>
+                <div id="yearly-list">
+                    <!-- Yearly data will be populated here -->
+                </div>
+                <div id="loader" class="loader">
+                    <p>讀取中...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const map = L.map('map').setView([25, 121], 2);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+            const pageTitleEl = document.getElementById('page-title');
+            const countryCountEl = document.getElementById('country-count');
+            const locationCountEl = document.getElementById('location-count');
+            const yearlyListEl = document.getElementById('yearly-list');
+            const loaderEl = document.getElementById('loader');
+
+            fetch('travel_data.json', { cache: 'no-store' }) // Prevent caching issues
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const locations = Array.isArray(data) ? data : (data && data.locations);
+
+                    if (!Array.isArray(locations)) {
+                        throw new Error("JSON data is not in the expected format.");
+                    }
+
+                    const pageTitle = (data && data.title) || '陳主惠和鄭亞薇的世界足跡';
+
+                    document.title = pageTitle;
+                    pageTitleEl.textContent = pageTitle;
+                    locationCountEl.textContent = locations.length;
+
+                    const yearlyData = {};
+                    const countrySet = new Set();
+
+                    locations.forEach(loc => {
+                        if (!loc || typeof loc !== 'object') return; // Skip invalid entries
+
+                        if (loc.year && loc.place) {
+                            if (!yearlyData[loc.year]) {
+                                yearlyData[loc.year] = [];
+                            }
+                            yearlyData[loc.year].push(loc.place);
+                        }
+
+                        if (loc.country) {
+                            countrySet.add(loc.country);
+                        }
+
+                        if (loc.lat != null && loc.lon != null) {
+                            L.marker([loc.lat, loc.lon]).addTo(map)
+                                .bindPopup(`<b>${loc.year}</b><br>${loc.place}`);
+                        }
+                    });
+
+                    countryCountEl.textContent = countrySet.size;
+
+                    const sortedYears = Object.keys(yearlyData).sort((a, b) => b - a);
+
+                    yearlyListEl.innerHTML = ''; // Clear previous content
+                    sortedYears.forEach(year => {
+                        const yearHeader = document.createElement('h2');
+                        yearHeader.textContent = `${year}年`;
+                        const placeList = document.createElement('ul');
+                        yearlyData[year].forEach(place => {
+                            const listItem = document.createElement('li');
+                            listItem.textContent = place;
+                            placeList.appendChild(listItem);
+                        });
+                        yearlyListEl.appendChild(yearHeader);
+                        yearlyListEl.appendChild(placeList);
+                    });
+
+                    if(loaderEl) loaderEl.style.display = 'none';
+
+                })
+                .catch(error => {
+                    console.error('Error processing data:', error);
+                    pageTitleEl.textContent = '錯誤';
+                    const infoPanel = document.getElementById('info-panel');
+                    infoPanel.innerHTML = `<p style='color:red; padding: 20px;'>資料載入失敗: ${error.message}</p>`;
+                });
         });
+    </script>
 
-        // Close any open tooltip when the map is clicked
-        map.addListener('click', () => {
-          if (currentOpenTooltip) {
-            currentOpenTooltip.style.display = 'none';
-            currentOpenTooltip = null;
-            currentOpenMarker = null;
-          }
-        });
-
-        const geocoder = new google.maps.Geocoder();
-
-        // Add markers to the map
-        travelData.forEach(item => {
-          geocodePlace(geocoder, map, item);
-        });
-
-      } catch (error) {
-        console.error("Could not load travel data:", error);
-        document.getElementById('info-panel').innerHTML = "<p>資料載入失敗，請稍後再試。</p>";
-      }
-    }
-
-    function updateInfoPanel(travelData) {
-      // Calculate total unique places
-      const uniquePlaces = new Set(travelData.map(item => item.place));
-      const totalLocations = uniquePlaces.size;
-
-      // Calculate total unique countries (heuristic)
-      const nonCountries = new Set(['高加索地區', '南極洲', '南太平洋', '中國絲路', '婆羅洲', '格陵蘭', '關島']);
-      const countrySet = new Set();
-      const countryPrefixes = ['中國', '俄羅斯', '菲律賓', '馬來西亞', '日本', '印度', '美國', '印尼'];
-
-      uniquePlaces.forEach(place => {
-        if (nonCountries.has(place)) return;
-
-        let countryFound = false;
-        for (const prefix of countryPrefixes) {
-          if (place.startsWith(prefix)) {
-            countrySet.add(prefix);
-            countryFound = true;
-            break;
-          }
-        }
-
-        if (!countryFound) {
-          if (place === '杜拜') countrySet.add('阿拉伯聯合大公國');
-          else if (place === '留尼旺' || place === '法屬圭亞那') countrySet.add('法國');
-          else countrySet.add(place);
-        }
-      });
-      const totalCountries = countrySet.size;
-
-      // Update Summary HTML
-      document.getElementById('summary').innerHTML = `<h2>總計</h2><h3>到過 ${totalCountries} 個國家</h3><h3>到過 ${totalLocations} 個地點</h3>`;
-
-      // Group places by year
-      const placesByYear = {};
-      travelData.forEach(item => {
-        if (!placesByYear[item.year]) {
-          placesByYear[item.year] = [];
-        }
-        placesByYear[item.year].push(item.place);
-      });
-
-      // Generate and inject HTML for yearly list
-      const yearlyListDiv = document.getElementById('yearly-list');
-      let yearlyHtml = '<h2>足跡列表</h2>';
-      const sortedYears = Object.keys(placesByYear).sort((a, b) => b - a);
-
-      sortedYears.forEach(year => {
-        yearlyHtml += `<h3>${year}</h3><ul>`;
-        const yearPlaces = [...new Set(placesByYear[year])];
-        yearPlaces.forEach(place => {
-          yearlyHtml += `<li>${place}</li>`;
-        });
-        yearlyHtml += '</ul>';
-      });
-      
-      yearlyListDiv.innerHTML = yearlyHtml;
-    }
-
-    function geocodePlace(geocoder, map, item) {
-      geocoder.geocode({ 'address': item.place }, (results, status) => {
-        if (status === 'OK') {
-          const marker = new google.maps.Marker({
-            map: map,
-            position: results[0].geometry.location,
-          });
-          const tooltip = document.getElementById('tooltip');
-
-          marker.addListener('click', (e) => {
-            // Close previously open tooltip if it's not the same marker
-            if (currentOpenTooltip && currentOpenMarker !== marker) {
-              currentOpenTooltip.style.display = 'none';
-            }
-            
-            // Toggle current marker's tooltip
-            if (tooltip.style.display === 'block') {
-              tooltip.style.display = 'none';
-              currentOpenTooltip = null;
-              currentOpenMarker = null;
-            } else {
-              tooltip.innerHTML = `<strong>${item.year}</strong><br>${item.place}`;
-              tooltip.style.display = 'block';
-              
-              // Intelligent positioning
-              let topPos = e.domEvent.clientY - tooltip.offsetHeight - 10; // 10px offset above
-              let leftPos = e.domEvent.clientX + 15; // 15px offset to the right
-
-              // Adjust if it goes off top
-              if (topPos < 0) {
-                  topPos = 10; // Stick to top with 10px margin
-              }
-
-              // Adjust if it goes off right
-              if (leftPos + tooltip.offsetWidth > window.innerWidth) {
-                  leftPos = e.domEvent.clientX - tooltip.offsetWidth - 15; // Position to the left
-                  if (leftPos < 0) { // If it still goes off left
-                      leftPos = 10; // Stick to left with 10px margin
-                  }
-              }
-
-              tooltip.style.top = topPos + 'px';
-              tooltip.style.left = leftPos + 'px';
-
-              currentOpenTooltip = tooltip;
-              currentOpenMarker = marker;
-            }
-          });
-
-          // Optional: Keep mouseover/mouseout for desktop experience
-          marker.addListener('mouseover', (e) => {
-            if (currentOpenMarker !== marker) { // Only show if not already clicked
-              tooltip.innerHTML = `<strong>${item.year}</strong><br>${item.place}`;
-              tooltip.style.display = 'block';
-              
-              // Intelligent positioning
-              let topPos = e.domEvent.clientY - tooltip.offsetHeight - 10; // 10px offset above
-              let leftPos = e.domEvent.clientX + 15; // 15px offset to the right
-
-              // Adjust if it goes off top
-              if (topPos < 0) {
-                  topPos = 10; // Stick to top with 10px margin
-              }
-
-              // Adjust if it goes off right
-              if (leftPos + tooltip.offsetWidth > window.innerWidth) {
-                  leftPos = e.domEvent.clientX - tooltip.offsetWidth - 15; // Position to the left
-                  if (leftPos < 0) { // If it still goes off left
-                      leftPos = 10; // Stick to left with 10px margin
-                  }
-              }
-
-              tooltip.style.top = topPos + 'px';
-              tooltip.style.left = leftPos + 'px';
-            }
-          });
-
-          marker.addListener('mouseout', () => {
-            if (currentOpenMarker !== marker) { // Only hide if not clicked
-              tooltip.style.display = 'none';
-            }
-          });
-
-        } else {
-          // Don't log error for now to avoid console spam for un-geocodable locations
-          // console.error('Geocode was not successful for the following reason: ' + status);
-        }
-      });
-    }
-
-    // This is the callback function that Google Maps will call after it has loaded.
-    function initMap() {
-      initialize();
-    }
-  </script>
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaXxK3Woq81fpxerQ3EFRMBc5bKmtQgO0&callback=initMap">
-  </script>
 </body>
 </html>
+
