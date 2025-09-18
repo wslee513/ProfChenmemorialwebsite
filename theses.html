@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>指導過的論文</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
   <style>
     body { 
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -18,7 +19,7 @@
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    h1 { 
+    h1, h2 {
       color: #2c3e50; 
       text-align: center;
       margin-bottom: 10px;
@@ -36,6 +37,7 @@
       font-size: 1.4rem;
       color: #34495e;
       margin-bottom: 10px;
+      text-align: left;
     }
     .tribute-card p {
       line-height: 1.7;
@@ -77,16 +79,28 @@
     .home-link:hover {
       text-decoration: underline;
     }
+    @media (max-width: 768px) {
+      .home-link {
+        padding: 12px;
+        font-size: 1.1rem;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+      }
+      .home-link:hover {
+        text-decoration: none;
+        background-color: #0056b3;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>陳主惠老師指導過的論文</h1>
-    <!-- Tributes will be dynamically loaded here -->
+    <a href="index.html" class="home-link" style="margin-top: 15px; margin-bottom: 30px;">&larr; 返回首頁</a>
     <div class="tributes"></div>
-    <!-- Thesis count will be dynamically loaded here -->
     <p id="thesis-count" style="text-align: center; font-size: 1.1rem; color: #555;"></p>
-    <table>
+    <table id="theses-table">
       <thead>
         <tr>
           <th style="width:10%;">學年度</th>
@@ -94,15 +108,26 @@
           <th>論文題目</th>
         </tr>
       </thead>
-      <!-- Table body will be dynamically loaded here -->
       <tbody></tbody>
     </table>
+
+    <h2 style="text-align: center; margin-top: 40px;">發表期刋研討會等著作</h2>
+    <table id="publications-table">
+      <thead>
+        <tr>
+          <th style="width:10%;">項次</th>
+          <th>著作資訊</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
     <a href="index.html" class="home-link">&larr; 返回首頁</a>
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      fetch('tributes_and_theses.json')
+      fetch('tributes_and_theses.json', { cache: 'no-store' })
         .then(response => {
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -112,6 +137,7 @@
         .then(data => {
           populateTributes(data.tributes);
           populateTheses(data.theses);
+          populatePublications(data.publications);
         })
         .catch(error => {
           console.error('Could not load data:', error);
@@ -120,6 +146,7 @@
     });
 
     function populateTributes(tributes) {
+      if (!tributes || !Array.isArray(tributes)) return;
       const tributesContainer = document.querySelector('.tributes');
       let tributesHtml = '';
       tributes.forEach(tribute => {
@@ -146,11 +173,12 @@
     }
 
     function populateTheses(theses) {
+      if (!theses || !Array.isArray(theses)) return;
       const thesisCount = document.getElementById('thesis-count');
-      const tableBody = document.querySelector('table tbody');
+      const tableBody = document.querySelector('#theses-table tbody');
       let tableHtml = '';
 
-      if (theses && theses.length > 0) {
+      if (theses.length > 0) {
         thesisCount.textContent = `共計 ${theses.length} 篇論文`;
         theses.forEach(thesis => {
           tableHtml += `
@@ -166,5 +194,23 @@
         thesisCount.textContent = '沒有論文資料';
       }
     }
+
+    function populatePublications(publications) {
+      if (!publications || !Array.isArray(publications)) return;
+      const tableBody = document.querySelector('#publications-table tbody');
+      let tableHtml = '';
+      if (publications.length > 0) {
+        publications.forEach((pub, index) => {
+          tableHtml += `
+            <tr>
+              <td>${index + 1}</td>
+              <td>${pub}</td>
+            </tr>
+          `;
+        });
+        tableBody.innerHTML = tableHtml;
+      }
+    }
   </script>
+</body>
 </html>

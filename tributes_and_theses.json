@@ -110,5 +110,25 @@
     {"year": "112(博)", "student": "黃智聰", "title": "曾文溪河口潮汐不對稱性特性研究"},
 	{"year": "113(博)", "student": "王常勉", "title": "土地利用對地表逕流跨越相鄰流域現象的影響"},
 	{"year": "114", "student": "沒有你嗎?", "title": "快來報到，再將你加入哦!"}
+  ],
+  "publications": [
+    "Ke, K-Y., Tan,Y.-C., Chen,C.-H., Lin, H.-T., Characterizing the hydraulic properties of unsaturated sand considering various porosities and drying-wetting paths of the retention curve., Hydrological Processes,2013,27(4),592-604",
+    "Wu,S.-C., Ton,Y.-C., Chen, C.-H., Lin, H.-T., Estimation of effective hydrogeological parameters by considering varying heterogeneity and pumping rates., Environmental Earth Sciences,2013,68(1),169-180",
+    "Chen, P.-Y., Chen,C.-H., Hsu, N.-S., Wu,C.-M., Wen,.-C., Influence of heterogeneity on unsaturated hydraulic properties: (I) local heterogeneity and scale effect., Hydrological Processes, 2012,26(23),3593-3603",
+    "Lin, H.-T., Tan,Y.-C., Chen, C.-H., Lin, W.-S., Liu, C.-W., Multivariate approaches optimize locations of groundwater pumping facilities for different hydrogeological scales., Hydrological Processes, 2012,26(19),2985-2996",
+    "Yu, H.-W., Chen,C.-H., Lo, W.-C., Mechanical behavior of the soil-root system., Soil Science, 2011, 176(2), 99-109",
+    "Lin, H.-T., Ke, K.-Y., Chen, C.-H., Wu,S.-C., Tan, Y.-C., Estimating anisotropic aquifer parameters by artificial neural networks., Hydrological Processes, 2010,24(22),3237-3250",
+    "Tan, Y.-C., Ma,K.-C., Chen, C.-H., Ke,K.-Y., Wang, M.-T., A numerical model of infiltration processes for hysteretic flow coupled with mass conservation., Irrigation and Drainage, 2009, 58(3), 366-380",
+    "Wu,S.-C., Ton,Y.-C., Chen,C. Lin,S.-T., Ke,K.-Y., A two-dimensional inverse model to identify transmissivity in an anisotropic aquifer., Hydrological Processes, 2008,22(26),5086-5096",
+    "Ton, C-C., Tung C.-P, Chen, C.-H., Yeh, W.-G., An integrated optimization algorithm for parameter structure identification in groundwater modeling., Advances in Water Resources,2008,31(3),545-560",
+    "Lin, L-W.,Chen,C.-H., Chang, H.-C., Chen,T.-C., Applying the grey assessment to the evaluation system of ecological green space on greening projects in Taiwan., Environmental Monitoring and Assessment,2008,136(1-3),129-146",
+    "Lu, C.-C.,Chen,C.-H., Yeh,T.-C.)., Wu C.-M., Yau, I.-F., Integration of transfer function model and back propagation neural network for forecasting storm sewer flow in Taipei metropolis., Stochastic Environmental Research and Risk Assessment, 2006, 20(1-2),6-22",
+    "Wu, C.-M., Yeh,T.-C.]., Zhu, J., Chen,C.-H., Sancho, A.F., Traditional analysis of aquifer tests: Comparing apples to oranges?., Water Resources Research, 2005, 41(9), 1-12",
+    "Huang, H-C., Ton,Y.-C., Liu, C.-W., Chen,C.-H., A novel hysteresis model in unsaturated soil., Hydrological Processes, 2005, 19(8), 1653-1665",
+    "Ke, K.-Y., Tan,Y.-C., Chen, C.-H., Chim,K.-S., Yeh, T.-C., Experimental study of consolidation properties of unsaturated soils during draining., Hydrologicol Processes, 2004, 18(13), 2565-2578",
+    "Tung, C-P, Hong, N.-M.,Chen,C.-H., Tan,Y.-C., Regional daily baseflow prediction., Hydrological Processes, 2004,18(11),2147-2164",
+    "Chen, I.-M., Tan,Y.-C.,Chen, C.-H., Analytical solutions of one-dimensional infiltration before and after ponding., Hydrological Processes, 2003, 17(4), 815-822",
+    "Lee, C.-C., Tan,Y.-C., Chen, C.-H., Jim Yeh, T.-C., Stochastic series lumped rainfall-runoff model for a watershed in Taiwan., Journal of Hydrology, 2001, 249(1-4),30-45",
+    "Chen, J.-M., Tan,Y.-C., Chen,C.-H.-H., Parlange, J.-Y., Analytical solutions for linearized Richards equation with arbitrary time-dependent surface fluxes., Water Resources Research, 2001, 37(4), 1091-1093" 
   ]
 }
