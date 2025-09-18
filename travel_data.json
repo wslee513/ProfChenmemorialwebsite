@@ -1,798 +1,1398 @@
-[
-  {
-    "year": 1997,
-    "place": "印尼"
-  },
-  {
-    "year": 1998,
-    "place": "法國"
-  },
-  {
-    "year": 1999,
-    "place": "越南"
-  },
-  {
-    "year": 1999,
-    "place": "捷克"
-  },
-  {
-    "year": 1999,
-    "place": "斯洛伐克"
-  },
-  {
-    "year": 1999,
-    "place": "匈牙利"
-  },
-  {
-    "year": 2000,
-    "place": "土耳其"
-  },
-  {
-    "year": 2000,
-    "place": "德國"
-  },
-  {
-    "year": 2000,
-    "place": "奧地利"
-  },
-  {
-    "year": 2001,
-    "place": "埃及"
-  },
-  {
-    "year": 2001,
-    "place": "柬埔寨"
-  },
-  {
-    "year": 2001,
-    "place": "義大利"
-  },
-  {
-    "year": 2002,
-    "place": "緬甸"
-  },
-  {
-    "year": 2002,
-    "place": "中國北京"
-  },
-  {
-    "year": 2002,
-    "place": "中國天津"
-  },
-  {
-    "year": 2002,
-    "place": "中國重慶"
-  },
-  {
-    "year": 2002,
-    "place": "中國武漢"
-  },
-  {
-    "year": 2002,
-    "place": "中國雲南"
-  },
-  {
-    "year": 2002,
-    "place": "希臘"
-  },
-  {
-    "year": 2002,
-    "place": "中國桂林"
-  },
-  {
-    "year": 2003,
-    "place": "寮國"
-  },
-  {
-    "year": 2003,
-    "place": "馬來西亞檳城"
-  },
-  {
-    "year": 2003,
-    "place": "丹麥"
-  },
-  {
-    "year": 2003,
-    "place": "冰島"
-  },
-  {
-    "year": 2003,
-    "place": "格陵蘭"
-  },
-  {
-    "year": 2003,
-    "place": "挪威"
-  },
-  {
-    "year": 2003,
-    "place": "芬蘭"
-  },
-  {
-    "year": 2003,
-    "place": "瑞典"
-  },
-  {
-    "year": 2003,
-    "place": "中國張家界"
-  },
-  {
-    "year": 2003,
-    "place": "菲律賓馬尼拉"
-  },
-  {
-    "year": 2004,
-    "place": "斯里蘭卡"
-  },
-  {
-    "year": 2004,
-    "place": "肯亞"
-  },
-  {
-    "year": 2004,
-    "place": "坦尚尼亞"
-  },
-  {
-    "year": 2004,
-    "place": "辛巴威"
-  },
-  {
-    "year": 2004,
-    "place": "波札那"
-  },
-  {
-    "year": 2004,
-    "place": "尚比亞"
-  },
-  {
-    "year": 2004,
-    "place": "瑞士"
-  },
-  {
-    "year": 2004,
-    "place": "帛琉"
-  },
-  {
-    "year": 2004,
-    "place": "日本九州"
-  },
-  {
-    "year": 2005,
-    "place": "中國南京"
-  },
-  {
-    "year": 2005,
-    "place": "中國上海"
-  },
-  {
-    "year": 2005,
-    "place": "羅馬尼亞"
-  },
-  {
-    "year": 2005,
-    "place": "保加利亞"
-  },
-  {
-    "year": 2005,
-    "place": "馬其頓"
-  },
-  {
-    "year": 2005,
-    "place": "斯洛維尼亞"
-  },
-  {
-    "year": 2005,
-    "place": "克羅埃西亞"
-  },
-  {
-    "year": 2006,
-    "place": "南非"
-  },
-  {
-    "year": 2006,
-    "place": "菲律賓蘇比克灣"
-  },
-  {
-    "year": 2006,
-    "place": "中國承德"
-  },
-  {
-    "year": 2006,
-    "place": "中國絲路"
-  },
-  {
-    "year": 2007,
-    "place": "中國黃山"
-  },
-  {
-    "year": 2007,
-    "place": "關島"
-  },
-  {
-    "year": 2007,
-    "place": "中國長白山"
-  },
-  {
-    "year": 2007,
-    "place": "日本琉球"
-  },
-  {
-    "year": 2007,
-    "place": "中國貴州"
-  },
-  {
-    "year": 2008,
-    "place": "高加索地區"
-  },
-  {
-    "year": 2008,
-    "place": "烏克蘭"
-  },
-  {
-    "year": 2008,
-    "place": "摩爾多瓦"
-  },
-  {
-    "year": 2008,
-    "place": "白俄羅斯"
-  },
-  {
-    "year": 2008,
-    "place": "菲律賓宿霧"
-  },
-  {
-    "year": 2008,
-    "place": "菲律賓薄荷島"
-  },
-  {
-    "year": 2009,
-    "place": "印度"
-  },
-  {
-    "year": 2009,
-    "place": "澳洲"
-  },
-  {
-    "year": 2009,
-    "place": "英國"
-  },
-  {
-    "year": 2009,
-    "place": "愛爾蘭"
-  },
-  {
-    "year": 2009,
-    "place": "尼泊爾"
-  },
-  {
-    "year": 2010,
-    "place": "中國山東"
-  },
-  {
-    "year": 2010,
-    "place": "西班牙"
-  },
-  {
-    "year": 2010,
-    "place": "葡萄牙"
-  },
-  {
-    "year": 2010,
-    "place": "摩納哥"
-  },
-  {
-    "year": 2010,
-    "place": "安道爾"
-  },
-  {
-    "year": 2011,
-    "place": "中國福建"
-  },
-  {
-    "year": 2012,
-    "place": "中國河南"
-  },
-  {
-    "year": 2012,
-    "place": "中國武夷山"
-  },
-  {
-    "year": 2013,
-    "place": "突尼西亞"
-  },
-  {
-    "year": 2013,
-    "place": "馬爾他"
-  },
-  {
-    "year": 2013,
-    "place": "俄羅斯"
-  },
-  {
-    "year": 2013,
-    "place": "愛沙尼亞"
-  },
-  {
-    "year": 2013,
-    "place": "拉脫維亞"
-  },
-  {
-    "year": 2013,
-    "place": "立陶宛"
-  },
-  {
-    "year": 2013,
-    "place": "波蘭"
-  },
-  {
-    "year": 2014,
-    "place": "葉門"
-  },
-  {
-    "year": 2014,
-    "place": "索科特拉島"
-  },
-  {
-    "year": 2014,
-    "place": "模里西斯"
-  },
-  {
-    "year": 2014,
-    "place": "馬達加斯加"
-  },
-  {
-    "year": 2014,
-    "place": "葛摩"
-  },
-  {
-    "year": 2014,
-    "place": "留尼旺"
-  },
-  {
-    "year": 2014,
-    "place": "塞席爾"
-  },
-  {
-    "year": 2014,
-    "place": "杜拜"
-  },
-  {
-    "year": 2015,
-    "place": "賽普勒斯"
-  },
-  {
-    "year": 2015,
-    "place": "以色列"
-  },
-  {
-    "year": 2015,
-    "place": "約旦"
-  },
-  {
-    "year": 2015,
-    "place": "阿爾及利亞"
-  },
-  {
-    "year": 2015,
-    "place": "荷蘭"
-  },
-  {
-    "year": 2015,
-    "place": "比利時"
-  },
-  {
-    "year": 2015,
-    "place": "盧森堡"
-  },
-  {
-    "year": 2016,
-    "place": "孟加拉"
-  },
-  {
-    "year": 2016,
-    "place": "不丹"
-  },
-  {
-    "year": 2016,
-    "place": "印度錫金"
-  },
-  {
-    "year": 2016,
-    "place": "奧地利"
-  },
-  {
-    "year": 2016,
-    "place": "斯洛維尼亞"
-  },
-  {
-    "year": 2016,
-    "place": "克羅埃西亞"
-  },
-  {
-    "year": 2016,
-    "place": "波士尼亞"
-  },
-  {
-    "year": 2016,
-    "place": "蒙特內哥羅"
-  },
-  {
-    "year": 2016,
-    "place": "阿爾巴尼亞"
-  },
-  {
-    "year": 2016,
-    "place": "馬其頓"
-  },
-  {
-    "year": 2016,
-    "place": "科索沃"
-  },
-  {
-    "year": 2016,
-    "place": "保加利亞"
-  },
-  {
-    "year": 2016,
-    "place": "羅馬尼亞"
-  },
-  {
-    "year": 2016,
-    "place": "塞爾維亞"
-  },
-  {
-    "year": 2016,
-    "place": "匈牙利"
-  },
-  {
-    "year": 2017,
-    "place": "俄羅斯海參崴"
-  },
-  {
-    "year": 2017,
-    "place": "俄羅斯堪察加半島"
-  },
-  {
-    "year": 2017,
-    "place": "俄羅斯貝加爾湖"
-  },
-  {
-    "year": 2017,
-    "place": "俄羅斯庫頁島"
-  },
-  {
-    "year": 2017,
-    "place": "蒙古"
-  },
-  {
-    "year": 2017,
-    "place": "德國"
-  },
-  {
-    "year": 2017,
-    "place": "厄瓜多"
-  },
-  {
-    "year": 2017,
-    "place": "哥倫比亞"
-  },
-  {
-    "year": 2017,
-    "place": "巴拿馬"
-  },
-  {
-    "year": 2017,
-    "place": "哥斯大黎加"
-  },
-  {
-    "year": 2017,
-    "place": "尼加拉瓜"
-  },
-  {
-    "year": 2017,
-    "place": "宏都拉斯"
-  },
-  {
-    "year": 2017,
-    "place": "薩爾瓦多"
-  },
-  {
-    "year": 2017,
-    "place": "瓜地馬拉"
-  },
-  {
-    "year": 2017,
-    "place": "貝里斯"
-  },
-  {
-    "year": 2018,
-    "place": "智利"
-  },
-  {
-    "year": 2018,
-    "place": "阿根廷"
-  },
-  {
-    "year": 2018,
-    "place": "印度"
-  },
-  {
-    "year": 2018,
-    "place": "法國"
-  },
-  {
-    "year": 2018,
-    "place": "中國山西"
-  },
-  {
-    "year": 2018,
-    "place": "中國寧夏"
-  },
-  {
-    "year": 2018,
-    "place": "中國內蒙古"
-  },
-  {
-    "year": 2018,
-    "place": "美國阿拉斯加"
-  },
-  {
-    "year": 2018,
-    "place": "中國新疆"
-  },
-  {
-    "year": 2018,
-    "place": "南極洲"
-  },
-  {
-    "year": 2018,
-    "place": "泰國"
-  },
-  {
-    "year": 2019,
-    "place": "埃及"
-  },
-  {
-    "year": 2019,
-    "place": "法屬圭亞那"
-  },
-  {
-    "year": 2019,
-    "place": "蘇利南"
-  },
-  {
-    "year": 2019,
-    "place": "蓋亞那"
-  },
-  {
-    "year": 2019,
-    "place": "古拉索"
-  },
-  {
-    "year": 2019,
-    "place": "阿魯巴"
-  },
-  {
-    "year": 2019,
-    "place": "哥倫比亞"
-  },
-  {
-    "year": 2019,
-    "place": "玻利維亞"
-  },
-  {
-    "year": 2019,
-    "place": "巴拉圭"
-  },
-  {
-    "year": 2019,
-    "place": "烏拉圭"
-  },
-  {
-    "year": 2019,
-    "place": "哈薩克"
-  },
-  {
-    "year": 2019,
-    "place": "吉爾吉斯"
-  },
-  {
-    "year": 2019,
-    "place": "塔吉克"
-  },
-  {
-    "year": 2019,
-    "place": "烏茲別克"
-  },
-  {
-    "year": 2019,
-    "place": "土庫曼"
-  },
-  {
-    "year": 2019,
-    "place": "卡達"
-  },
-  {
-    "year": 2019,
-    "place": "土耳其"
-  },
-  {
-    "year": 2019,
-    "place": "伊朗"
-  },
-  {
-    "year": 2019,
-    "place": "亞美尼亞"
-  },
-  {
-    "year": 2019,
-    "place": "中國雲南"
-  },
-  {
-    "year": 2019,
-    "place": "中國內蒙古"
-  },
-  {
-    "year": 2019,
-    "place": "俄羅斯"
-  },
-  {
-    "year": 2019,
-    "place": "中國廣西"
-  },
-  {
-    "year": 2020,
-    "place": "緬甸"
-  },
-  {
-    "year": 2022,
-    "place": "東帝汶"
-  },
-  {
-    "year": 2022,
-    "place": "印尼科莫多國家公園"
-  },
-  {
-    "year": 2023,
-    "place": "新加坡"
-  },
-  {
-    "year": 2023,
-    "place": "馬來西亞"
-  },
-  {
-    "year": 2023,
-    "place": "印尼"
-  },
-  {
-    "year": 2023,
-    "place": "寮國"
-  },
-  {
-    "year": 2023,
-    "place": "婆羅洲"
-  },
-  {
-    "year": 2023,
-    "place": "汶萊"
-  },
-  {
-    "year": 2023,
-    "place": "葡萄牙"
-  },
-  {
-    "year": 2023,
-    "place": "中國浙江"
-  },
-  {
-    "year": 2023,
-    "place": "巴基斯坦"
-  },
-  {
-    "year": 2023,
-    "place": "阿富汗"
-  },
-  {
-    "year": 2024,
-    "place": "伊朗"
-  },
-  {
-    "year": 2024,
-    "place": "伊索比亞"
-  },
-  {
-    "year": 2024,
-    "place": "烏干達"
-  },
-  {
-    "year": 2024,
-    "place": "盧安達"
-  },
-  {
-    "year": 2024,
-    "place": "蒲隆地"
-  },
-  {
-    "year": 2024,
-    "place": "義大利"
-  },
-  {
-    "year": 2024,
-    "place": "摩洛哥"
-  },
-  {
-    "year": 2024,
-    "place": "西班牙"
-  },
-  {
-    "year": 2024,
-    "place": "土耳其"
-  },
-  {
-    "year": 2024,
-    "place": "納米比亞"
-  },
-  {
-    "year": 2024,
-    "place": "莫三比克"
-  },
-  {
-    "year": 2024,
-    "place": "史瓦帝尼"
-  },
-  {
-    "year": 2024,
-    "place": "賴索托"
-  },
-  {
-    "year": 2024,
-    "place": "馬拉威"
-  },
-  {
-    "year": 2024,
-    "place": "南非"
-  },
-  {
-    "year": 2025,
-    "place": "紐西蘭"
-  },
-  {
-    "year": 2025,
-    "place": "中國貴州"
-  },
-  {
-    "year": 2025,
-    "place": "中國內蒙古"
-  },
-  {
-    "year": 2025,
-    "place": "中國黑龍江"
-  },
-  {
-    "year": 2025,
-    "place": "挪威"
-  },
-  {
-    "year": 2025,
-    "place": "冰島"
-  },
-  {
-    "year": 2025,
-    "place": "越南"
-  },
-  {
-    "year": 2026,
-    "place": "南太平洋"
-  },
-  {
-    "year": 2026,
-    "place": "伊拉克"
-  },
-  {
-    "year": 2026,
-    "place": "黎巴嫩"
-  },
-  {
-    "year": 2026,
-    "place": "敘利亞"
-  }
-]
+{
+  "title": "陳主惠和鄭亞薇的世界足跡",
+  "locations": [
+    {
+      "year": 1997,
+      "place": "印尼",
+      "lat": -2.4833826,
+      "lon": 117.8902853,
+      "country": "Indonesia"
+    },
+    {
+      "year": 1998,
+      "place": "法國",
+      "lat": 46.603354,
+      "lon": 1.8883335,
+      "country": "France"
+    },
+    {
+      "year": 1999,
+      "place": "越南",
+      "lat": 15.9266657,
+      "lon": 107.9650855,
+      "country": "Vietnam"
+    },
+    {
+      "year": 1999,
+      "place": "捷克",
+      "lat": 49.7439047,
+      "lon": 15.3381061,
+      "country": "Czechia"
+    },
+    {
+      "year": 1999,
+      "place": "斯洛伐克",
+      "lat": 48.7411522,
+      "lon": 19.4528646,
+      "country": "Slovakia"
+    },
+    {
+      "year": 1999,
+      "place": "匈牙利",
+      "lat": 47.1817585,
+      "lon": 19.5060937,
+      "country": "Hungary"
+    },
+    {
+      "year": 2000,
+      "place": "土耳其",
+      "lat": 39.294076,
+      "lon": 35.2316631,
+      "country": "Turkey"
+    },
+    {
+      "year": 2000,
+      "place": "德國",
+      "lat": 51.1638175,
+      "lon": 10.4478313,
+      "country": "Germany"
+    },
+    {
+      "year": 2000,
+      "place": "奧地利",
+      "lat": 47.59397,
+      "lon": 14.12456,
+      "country": "Austria"
+    },
+    {
+      "year": 2001,
+      "place": "埃及",
+      "lat": 26.2540493,
+      "lon": 29.2675469,
+      "country": "Egypt"
+    },
+    {
+      "year": 2001,
+      "place": "柬埔寨",
+      "lat": 12.5433216,
+      "lon": 104.8144914,
+      "country": "Cambodia"
+    },
+    {
+      "year": 2001,
+      "place": "義大利",
+      "lat": 42.6384261,
+      "lon": 12.674297,
+      "country": "Italy"
+    },
+    {
+      "year": 2002,
+      "place": "緬甸",
+      "lat": 17.1750495,
+      "lon": 95.9999652,
+      "country": "Myanmar"
+    },
+    {
+      "year": 2002,
+      "place": "中國北京",
+      "lat": 40.190632,
+      "lon": 116.412144,
+      "country": "China"
+    },
+    {
+      "year": 2002,
+      "place": "中國天津",
+      "lat": 39.3032619,
+      "lon": 117.4163641,
+      "country": "China"
+    },
+    {
+      "year": 2002,
+      "place": "中國重慶",
+      "lat": 30.05518,
+      "lon": 107.8748712,
+      "country": "China"
+    },
+    {
+      "year": 2002,
+      "place": "中國武漢",
+      "lat": 30.5951051,
+      "lon": 114.2999353,
+      "country": "China"
+    },
+    {
+      "year": 2002,
+      "place": "中國雲南",
+      "lat": 25.0,
+      "lon": 102.0,
+      "country": "China"
+    },
+    {
+      "year": 2002,
+      "place": "希臘",
+      "lat": 38.9953683,
+      "lon": 21.9877132,
+      "country": "Greece"
+    },
+    {
+      "year": 2002,
+      "place": "中國桂林",
+      "lat": 25.2779894,
+      "lon": 110.2910622,
+      "country": "China"
+    },
+    {
+      "year": 2003,
+      "place": "寮國",
+      "lat": 20.0171109,
+      "lon": 103.378253,
+      "country": "Laos"
+    },
+    {
+      "year": 2003,
+      "place": "馬來西亞檳城",
+      "lat": 5.4065013,
+      "lon": 100.2559077,
+      "country": "Malaysia"
+    },
+    {
+      "year": 2003,
+      "place": "丹麥",
+      "lat": 55.670249,
+      "lon": 10.3333283,
+      "country": "Denmark"
+    },
+    {
+      "year": 2003,
+      "place": "冰島",
+      "lat": 64.9841821,
+      "lon": -18.1059013,
+      "country": "Iceland"
+    },
+    {
+      "year": 2003,
+      "place": "格陵蘭",
+      "lat": 77.6192349,
+      "lon": -42.8125967,
+      "country": "Greenland"
+    },
+    {
+      "year": 2003,
+      "place": "挪威",
+      "lat": 61.1529386,
+      "lon": 8.7876653,
+      "country": "Norway"
+    },
+    {
+      "year": 2003,
+      "place": "芬蘭",
+      "lat": 63.2467777,
+      "lon": 25.9209164,
+      "country": "Finland"
+    },
+    {
+      "year": 2003,
+      "place": "瑞典",
+      "lat": 59.6749712,
+      "lon": 14.5208584,
+      "country": "Sweden"
+    },
+    {
+      "year": 2003,
+      "place": "中國張家界",
+      "lat": 29.373828,
+      "lon": 110.530142,
+      "country": "China"
+    },
+    {
+      "year": 2003,
+      "place": "菲律賓馬尼拉",
+      "lat": 14.5904492,
+      "lon": 120.9803621,
+      "country": "Philippines"
+    },
+    {
+      "year": 2004,
+      "place": "斯里蘭卡",
+      "lat": 7.8771833,
+      "lon": 80.6625544,
+      "country": "Sri Lanka"
+    },
+    {
+      "year": 2004,
+      "place": "肯亞",
+      "lat": 1.4419683,
+      "lon": 38.4313975,
+      "country": "Kenya"
+    },
+    {
+      "year": 2004,
+      "place": "坦尚尼亞",
+      "lat": -6.5247123,
+      "lon": 35.7878438,
+      "country": "Tanzania"
+    },
+    {
+      "year": 2004,
+      "place": "辛巴威",
+      "lat": -18.4554963,
+      "lon": 29.7468414,
+      "country": "Zimbabwe"
+    },
+    {
+      "year": 2004,
+      "place": "波札那",
+      "lat": -23.1681782,
+      "lon": 24.5928742,
+      "country": "Botswana"
+    },
+    {
+      "year": 2004,
+      "place": "尚比亞",
+      "lat": -14.5189121,
+      "lon": 27.5589884,
+      "country": "Zambia"
+    },
+    {
+      "year": 2004,
+      "place": "瑞士",
+      "lat": 46.7985624,
+      "lon": 8.2319736,
+      "country": "Switzerland"
+    },
+    {
+      "year": 2004,
+      "place": "帛琉",
+      "lat": 5.3783537,
+      "lon": 132.9102573,
+      "country": "Palau"
+    },
+    {
+      "year": 2004,
+      "place": "日本九州",
+      "lat": 33.0,
+      "lon": 131.0,
+      "country": "Japan"
+    },
+    {
+      "year": 2005,
+      "place": "中國南京",
+      "lat": 32.0438284,
+      "lon": 118.7788631,
+      "country": "China"
+    },
+    {
+      "year": 2005,
+      "place": "中國上海",
+      "lat": 31.2312707,
+      "lon": 121.4700152,
+      "country": "China"
+    },
+    {
+      "year": 2005,
+      "place": "羅馬尼亞",
+      "lat": 45.9852129,
+      "lon": 24.6859225,
+      "country": "Romania"
+    },
+    {
+      "year": 2005,
+      "place": "保加利亞",
+      "lat": 42.6073975,
+      "lon": 25.4856617,
+      "country": "Bulgaria"
+    },
+    {
+      "year": 2005,
+      "place": "馬其頓",
+      "lat": 41.6171214,
+      "lon": 21.7168387,
+      "country": "North Macedonia"
+    },
+    {
+      "year": 2005,
+      "place": "斯洛維尼亞",
+      "lat": 46.1199444,
+      "lon": 14.8153333,
+      "country": "Slovenia"
+    },
+    {
+      "year": 2005,
+      "place": "克羅埃西亞",
+      "lat": 45.3658443,
+      "lon": 15.6575209,
+      "country": "Croatia"
+    },
+    {
+      "year": 2006,
+      "place": "南非",
+      "lat": -28.8166236,
+      "lon": 24.991639,
+      "country": "South Africa"
+    },
+    {
+      "year": 2006,
+      "place": "菲律賓蘇比克灣",
+      "lat": 14.79,
+      "lon": 120.23,
+      "country": "Philippines"
+    },
+    {
+      "year": 2006,
+      "place": "中國承德",
+      "lat": 40.9507147,
+      "lon": 117.9567031,
+      "country": "China"
+    },
+    {
+      "year": 2006,
+      "place": "中國絲路",
+      "lat": 28.0,
+      "lon": 116.0,
+      "country": "China"
+    },
+    {
+      "year": 2007,
+      "place": "中國黃山",
+      "lat": 29.7172627,
+      "lon": 118.3324811,
+      "country": "China"
+    },
+    {
+      "year": 2007,
+      "place": "關島",
+      "lat": 13.4499943,
+      "lon": 144.7651677,
+      "country": "United States"
+    },
+    {
+      "year": 2007,
+      "place": "中國長白山",
+      "lat": 42.4605171,
+      "lon": 128.1219234,
+      "country": "China"
+    },
+    {
+      "year": 2007,
+      "place": "日本琉球",
+      "lat": 26.2160998,
+      "lon": 127.6792925,
+      "country": "Japan"
+    },
+    {
+      "year": 2007,
+      "place": "中國貴州",
+      "lat": 27.0,
+      "lon": 107.0,
+      "country": "China"
+    },
+    {
+      "year": 2008,
+      "place": "高加索地區",
+      "lat": 44.8632577,
+      "lon": 43.4406913,
+      "country": "Russia"
+    },
+    {
+      "year": 2008,
+      "place": "烏克蘭",
+      "lat": 49.4871968,
+      "lon": 31.2718321,
+      "country": "Ukraine"
+    },
+    {
+      "year": 2008,
+      "place": "摩爾多瓦",
+      "lat": 47.2879608,
+      "lon": 28.5670941,
+      "country": "Moldova"
+    },
+    {
+      "year": 2008,
+      "place": "白俄羅斯",
+      "lat": 53.4250605,
+      "lon": 27.6971358,
+      "country": "Belarus"
+    },
+    {
+      "year": 2008,
+      "place": "菲律賓宿霧",
+      "lat": 10.47,
+      "lon": 123.83,
+      "country": "Philippines"
+    },
+    {
+      "year": 2008,
+      "place": "菲律賓薄荷島",
+      "lat": 9.8807822,
+      "lon": 124.2064612,
+      "country": "Philippines"
+    },
+    {
+      "year": 2009,
+      "place": "印度",
+      "lat": 22.3511148,
+      "lon": 78.6677428,
+      "country": "India"
+    },
+    {
+      "year": 2009,
+      "place": "澳洲",
+      "lat": -24.7761086,
+      "lon": 134.755,
+      "country": "Australia"
+    },
+    {
+      "year": 2009,
+      "place": "英國",
+      "lat": 54.7023545,
+      "lon": -3.2765753,
+      "country": "United Kingdom"
+    },
+    {
+      "year": 2009,
+      "place": "愛爾蘭",
+      "lat": 53.4295,
+      "lon": -8.1227485,
+      "country": "Ireland"
+    },
+    {
+      "year": 2009,
+      "place": "尼泊爾",
+      "lat": 28.3780464,
+      "lon": 83.9999901,
+      "country": "Nepal"
+    },
+    {
+      "year": 2010,
+      "place": "中國山東",
+      "lat": 36.398987,
+      "lon": 118.5055691,
+      "country": "China"
+    },
+    {
+      "year": 2010,
+      "place": "西班牙",
+      "lat": 39.3260685,
+      "lon": -4.8379791,
+      "country": "Spain"
+    },
+    {
+      "year": 2010,
+      "place": "葡萄牙",
+      "lat": 39.6621648,
+      "lon": -8.1353519,
+      "country": "Portugal"
+    },
+    {
+      "year": 2010,
+      "place": "摩納哥",
+      "lat": 43.7311424,
+      "lon": 7.4197576,
+      "country": "Monaco"
+    },
+    {
+      "year": 2010,
+      "place": "安道爾",
+      "lat": 42.5407167,
+      "lon": 1.5732033,
+      "country": "Andorra"
+    },
+    {
+      "year": 2011,
+      "place": "中國福建",
+      "lat": 26.193218,
+      "lon": 118.2208721,
+      "country": "China"
+    },
+    {
+      "year": 2012,
+      "place": "中國河南",
+      "lat": 34.0000001,
+      "lon": 113.9999999,
+      "country": "China"
+    },
+    {
+      "year": 2012,
+      "place": "中國武夷山",
+      "lat": 27.7590448,
+      "lon": 118.0297688,
+      "country": "China"
+    },
+    {
+      "year": 2013,
+      "place": "突尼西亞",
+      "lat": 36.8002068,
+      "lon": 10.1857757,
+      "country": "Tunisia"
+    },
+    {
+      "year": 2013,
+      "place": "馬爾他",
+      "lat": 35.8885993,
+      "lon": 14.4476911,
+      "country": "Malta"
+    },
+    {
+      "year": 2013,
+      "place": "俄羅斯",
+      "lat": 64.6863136,
+      "lon": 97.7453061,
+      "country": "Russia"
+    },
+    {
+      "year": 2013,
+      "place": "愛沙尼亞",
+      "lat": 58.7523778,
+      "lon": 25.3319078,
+      "country": "Estonia"
+    },
+    {
+      "year": 2013,
+      "place": "拉脫維亞",
+      "lat": 56.8406494,
+      "lon": 24.7537645,
+      "country": "Latvia"
+    },
+    {
+      "year": 2013,
+      "place": "立陶宛",
+      "lat": 55.3500003,
+      "lon": 23.7499997,
+      "country": "Lithuania"
+    },
+    {
+      "year": 2013,
+      "place": "波蘭",
+      "lat": 52.215933,
+      "lon": 19.134422,
+      "country": "Poland"
+    },
+    {
+      "year": 2014,
+      "place": "葉門",
+      "lat": 16.3471243,
+      "lon": 47.8915271,
+      "country": "Yemen"
+    },
+    {
+      "year": 2014,
+      "place": "索科特拉島",
+      "lat": 12.5074541,
+      "lon": 53.8930221,
+      "country": "Yemen"
+    },
+    {
+      "year": 2014,
+      "place": "模里西斯",
+      "lat": -20.2759451,
+      "lon": 57.5703566,
+      "country": "Mauritius"
+    },
+    {
+      "year": 2014,
+      "place": "馬達加斯加",
+      "lat": -18.9249604,
+      "lon": 46.4416422,
+      "country": "Madagascar"
+    },
+    {
+      "year": 2014,
+      "place": "葛摩",
+      "lat": -12.2045176,
+      "lon": 44.2832964,
+      "country": "Comoros"
+    },
+    {
+      "year": 2014,
+      "place": "留尼旺",
+      "lat": -21.1309332,
+      "lon": 55.5265771,
+      "country": "France"
+    },
+    {
+      "year": 2014,
+      "place": "塞席爾",
+      "lat": -4.6574977,
+      "lon": 55.4540146,
+      "country": "Seychelles"
+    },
+    {
+      "year": 2014,
+      "place": "杜拜",
+      "lat": 25.2647227,
+      "lon": 55.2924146,
+      "country": "United Arab Emirates"
+    },
+    {
+      "year": 2015,
+      "place": "賽普勒斯",
+      "lat": 34.9174159,
+      "lon": 32.8899027,
+      "country": "Cyprus"
+    },
+    {
+      "year": 2015,
+      "place": "以色列",
+      "lat": 30.8124247,
+      "lon": 34.8594762,
+      "country": "Israel"
+    },
+    {
+      "year": 2015,
+      "place": "約旦",
+      "lat": 31.1667049,
+      "lon": 36.941628,
+      "country": "Jordan"
+    },
+    {
+      "year": 2015,
+      "place": "阿爾及利亞",
+      "lat": 28.0000272,
+      "lon": 2.9999825,
+      "country": "Algeria"
+    },
+    {
+      "year": 2015,
+      "place": "荷蘭",
+      "lat": 52.2434979,
+      "lon": 5.6343227,
+      "country": "Netherlands"
+    },
+    {
+      "year": 2015,
+      "place": "比利時",
+      "lat": 50.6402809,
+      "lon": 4.6667145,
+      "country": "Belgium"
+    },
+    {
+      "year": 2015,
+      "place": "盧森堡",
+      "lat": 49.6112768,
+      "lon": 6.129799,
+      "country": "Luxembourg"
+    },
+    {
+      "year": 2016,
+      "place": "孟加拉",
+      "lat": 24.4769288,
+      "lon": 90.2934413,
+      "country": "Bangladesh"
+    },
+    {
+      "year": 2016,
+      "place": "不丹",
+      "lat": 27.549511,
+      "lon": 90.5119273,
+      "country": "Bhutan"
+    },
+    {
+      "year": 2016,
+      "place": "印度錫金",
+      "lat": 28.8977681,
+      "lon": 94.7841203,
+      "country": "India"
+    },
+    {
+      "year": 2016,
+      "place": "奧地利",
+      "lat": 47.59397,
+      "lon": 14.12456,
+      "country": "Austria"
+    },
+    {
+      "year": 2016,
+      "place": "斯洛維尼亞",
+      "lat": 46.1199444,
+      "lon": 14.8153333,
+      "country": "Slovenia"
+    },
+    {
+      "year": 2016,
+      "place": "克羅埃西亞",
+      "lat": 45.3658443,
+      "lon": 15.6575209,
+      "country": "Croatia"
+    },
+    {
+      "year": 2016,
+      "place": "波士尼亞",
+      "lat": 44.0,
+      "lon": 18.0,
+      "country": "Bosnia and Herzegovina"
+    },
+    {
+      "year": 2016,
+      "place": "蒙特內哥羅",
+      "lat": 42.9868853,
+      "lon": 19.5180992,
+      "country": "Montenegro"
+    },
+    {
+      "year": 2016,
+      "place": "阿爾巴尼亞",
+      "lat": 41.000028,
+      "lon": 19.9999619,
+      "country": "Albania"
+    },
+    {
+      "year": 2016,
+      "place": "馬其頓",
+      "lat": 41.6171214,
+      "lon": 21.7168387,
+      "country": "North Macedonia"
+    },
+    {
+      "year": 2016,
+      "place": "科索沃",
+      "lat": 42.5869578,
+      "lon": 20.9021231,
+      "country": "Kosovo"
+    },
+    {
+      "year": 2016,
+      "place": "保加利亞",
+      "lat": 42.6073975,
+      "lon": 25.4856617,
+      "country": "Bulgaria"
+    },
+    {
+      "year": 2016,
+      "place": "羅馬尼亞",
+      "lat": 45.9852129,
+      "lon": 24.6859225,
+      "country": "Romania"
+    },
+    {
+      "year": 2016,
+      "place": "塞爾維亞",
+      "lat": 44.0243229,
+      "lon": 21.0765743,
+      "country": "Serbia"
+    },
+    {
+      "year": 2016,
+      "place": "匈牙利",
+      "lat": 47.1817585,
+      "lon": 19.5060937,
+      "country": "Hungary"
+    },
+    {
+      "year": 2017,
+      "place": "俄羅斯海參崴",
+      "lat": 43.1150678,
+      "lon": 131.8855768,
+      "country": "Russia"
+    },
+    {
+      "year": 2017,
+      "place": "俄羅斯堪察加半島",
+      "lat": 55.8680319,
+      "lon": 158.8025312,
+      "country": "Russia"
+    },
+    {
+      "year": 2017,
+      "place": "俄羅斯貝加爾湖",
+      "lat": 53.6167299,
+      "lon": 108.1307186,
+      "country": "Russia"
+    },
+    {
+      "year": 2017,
+      "place": "俄羅斯庫頁島",
+      "lat": 50.159476,
+      "lon": 143.0264412,
+      "country": "Russia"
+    },
+    {
+      "year": 2017,
+      "place": "蒙古",
+      "lat": 46.8250388,
+      "lon": 103.8499736,
+      "country": "Mongolia"
+    },
+    {
+      "year": 2017,
+      "place": "德國",
+      "lat": 51.1638175,
+      "lon": 10.4478313,
+      "country": "Germany"
+    },
+    {
+      "year": 2017,
+      "place": "厄瓜多",
+      "lat": -1.3397668,
+      "lon": -79.3666965,
+      "country": "Ecuador"
+    },
+    {
+      "year": 2017,
+      "place": "哥倫比亞",
+      "lat": 4.099917,
+      "lon": -72.9088133,
+      "country": "Colombia"
+    },
+    {
+      "year": 2017,
+      "place": "巴拿馬",
+      "lat": 8.559559,
+      "lon": -81.1308434,
+      "country": "Panama"
+    },
+    {
+      "year": 2017,
+      "place": "哥斯大黎加",
+      "lat": 10.2735633,
+      "lon": -84.0739102,
+      "country": "Costa Rica"
+    },
+    {
+      "year": 2017,
+      "place": "尼加拉瓜",
+      "lat": 12.3506436,
+      "lon": -85.7841006,
+      "country": "Nicaragua"
+    },
+    {
+      "year": 2017,
+      "place": "宏都拉斯",
+      "lat": 15.2572432,
+      "lon": -86.0755145,
+      "country": "Honduras"
+    },
+    {
+      "year": 2017,
+      "place": "薩爾瓦多",
+      "lat": -12.9822499,
+      "lon": -38.4812772,
+      "country": "Brazil"
+    },
+    {
+      "year": 2017,
+      "place": "瓜地馬拉",
+      "lat": 15.5855545,
+      "lon": -90.345759,
+      "country": "Guatemala"
+    },
+    {
+      "year": 2017,
+      "place": "貝里斯",
+      "lat": 17.1204943,
+      "lon": -88.6859028,
+      "country": "Belize"
+    },
+    {
+      "year": 2018,
+      "place": "智利",
+      "lat": -31.7613365,
+      "lon": -71.3187697,
+      "country": "Chile"
+    },
+    {
+      "year": 2018,
+      "place": "阿根廷",
+      "lat": -34.9964963,
+      "lon": -64.9672817,
+      "country": "Argentina"
+    },
+    {
+      "year": 2018,
+      "place": "印度",
+      "lat": 22.3511148,
+      "lon": 78.6677428,
+      "country": "India"
+    },
+    {
+      "year": 2018,
+      "place": "法國",
+      "lat": 46.603354,
+      "lon": 1.8883335,
+      "country": "France"
+    },
+    {
+      "year": 2018,
+      "place": "中國山西",
+      "lat": 37.0,
+      "lon": 112.0,
+      "country": "China"
+    },
+    {
+      "year": 2018,
+      "place": "中國寧夏",
+      "lat": 37.0000001,
+      "lon": 105.9999999,
+      "country": "China"
+    },
+    {
+      "year": 2018,
+      "place": "中國內蒙古",
+      "lat": 43.2443242,
+      "lon": 114.3251664,
+      "country": "China"
+    },
+    {
+      "year": 2018,
+      "place": "美國阿拉斯加",
+      "lat": 64.0,
+      "lon": -153.0,
+      "country": "United States"
+    },
+    {
+      "year": 2018,
+      "place": "中國新疆",
+      "lat": 42.4804953,
+      "lon": 85.4633464,
+      "country": "China"
+    },
+    {
+      "year": 2018,
+      "place": "南極洲",
+      "lat": -72.8438691,
+      "lon": 0.0,
+      "country": "Antarctica"
+    },
+    {
+      "year": 2018,
+      "place": "泰國",
+      "lat": 14.8971921,
+      "lon": 100.83273,
+      "country": "Thailand"
+    },
+    {
+      "year": 2019,
+      "place": "埃及",
+      "lat": 26.2540493,
+      "lon": 29.2675469,
+      "country": "Egypt"
+    },
+    {
+      "year": 2019,
+      "place": "法屬圭亞那",
+      "lat": 4.0039882,
+      "lon": -52.999998,
+      "country": "France"
+    },
+    {
+      "year": 2019,
+      "place": "蘇利南",
+      "lat": 4.1413025,
+      "lon": -56.0771187,
+      "country": "Suriname"
+    },
+    {
+      "year": 2019,
+      "place": "蓋亞那",
+      "lat": 4.8417097,
+      "lon": -58.6416891,
+      "country": "Guyana"
+    },
+    {
+      "year": 2019,
+      "place": "古拉索",
+      "lat": 12.1176488,
+      "lon": -68.9309263,
+      "country": "Netherlands"
+    },
+    {
+      "year": 2019,
+      "place": "阿魯巴",
+      "lat": 12.5013629,
+      "lon": -69.9618475,
+      "country": "Netherlands"
+    },
+    {
+      "year": 2019,
+      "place": "哥倫比亞",
+      "lat": 4.099917,
+      "lon": -72.9088133,
+      "country": "Colombia"
+    },
+    {
+      "year": 2019,
+      "place": "玻利維亞",
+      "lat": -17.0568696,
+      "lon": -64.9912286,
+      "country": "Bolivia"
+    },
+    {
+      "year": 2019,
+      "place": "巴拉圭",
+      "lat": -23.3165935,
+      "lon": -58.1693445,
+      "country": "Paraguay"
+    },
+    {
+      "year": 2019,
+      "place": "烏拉圭",
+      "lat": -32.8755548,
+      "lon": -56.0201525,
+      "country": "Uruguay"
+    },
+    {
+      "year": 2019,
+      "place": "哈薩克",
+      "lat": 48.1012954,
+      "lon": 66.7780818,
+      "country": "Kazakhstan"
+    },
+    {
+      "year": 2019,
+      "place": "吉爾吉斯",
+      "lat": 41.5089324,
+      "lon": 74.724091,
+      "country": "Kyrgyzstan"
+    },
+    {
+      "year": 2019,
+      "place": "塔吉克",
+      "lat": 38.6281733,
+      "lon": 70.8156541,
+      "country": "Tajikistan"
+    },
+    {
+      "year": 2019,
+      "place": "烏茲別克",
+      "lat": 41.32373,
+      "lon": 63.9528098,
+      "country": "Uzbekistan"
+    },
+    {
+      "year": 2019,
+      "place": "土庫曼",
+      "lat": 39.3763807,
+      "lon": 59.3924609,
+      "country": "Turkmenistan"
+    },
+    {
+      "year": 2019,
+      "place": "卡達",
+      "lat": 25.3336984,
+      "lon": 51.2295295,
+      "country": "Qatar"
+    },
+    {
+      "year": 2019,
+      "place": "土耳其",
+      "lat": 39.294076,
+      "lon": 35.2316631,
+      "country": "Turkey"
+    },
+    {
+      "year": 2019,
+      "place": "伊朗",
+      "lat": 32.6475314,
+      "lon": 54.5643516,
+      "country": "Iran"
+    },
+    {
+      "year": 2019,
+      "place": "亞美尼亞",
+      "lat": 40.7696272,
+      "lon": 44.6736646,
+      "country": "Armenia"
+    },
+    {
+      "year": 2019,
+      "place": "中國雲南",
+      "lat": 25.0,
+      "lon": 102.0,
+      "country": "China"
+    },
+    {
+      "year": 2019,
+      "place": "中國內蒙古",
+      "lat": 43.2443242,
+      "lon": 114.3251664,
+      "country": "China"
+    },
+    {
+      "year": 2019,
+      "place": "俄羅斯",
+      "lat": 64.6863136,
+      "lon": 97.7453061,
+      "country": "Russia"
+    },
+    {
+      "year": 2019,
+      "place": "中國廣西",
+      "lat": 24.0,
+      "lon": 109.0,
+      "country": "China"
+    },
+    {
+      "year": 2020,
+      "place": "緬甸",
+      "lat": 17.1750495,
+      "lon": 95.9999652,
+      "country": "Myanmar"
+    },
+    {
+      "year": 2022,
+      "place": "東帝汶",
+      "lat": -8.7443169,
+      "lon": 126.063482,
+      "country": "East Timor"
+    },
+    {
+      "year": 2022,
+      "place": "印尼科莫多國家公園",
+      "lat": -8.54,
+      "lon": 119.49,
+      "country": "Indonesia"
+    },
+    {
+      "year": 2023,
+      "place": "新加坡",
+      "lat": 1.2899175,
+      "lon": 103.8519072,
+      "country": "Singapore"
+    },
+    {
+      "year": 2023,
+      "place": "馬來西亞",
+      "lat": 4.5693754,
+      "lon": 102.2656823,
+      "country": "Malaysia"
+    },
+    {
+      "year": 2023,
+      "place": "印尼",
+      "lat": -2.4833826,
+      "lon": 117.8902853,
+      "country": "Indonesia"
+    },
+    {
+      "year": 2023,
+      "place": "寮國",
+      "lat": 20.0171109,
+      "lon": 103.378253,
+      "country": "Laos"
+    },
+    {
+      "year": 2023,
+      "place": "婆羅洲",
+      "lat": 1.4297828,
+      "lon": 114.7410413,
+      "country": "Indonesia"
+    },
+    {
+      "year": 2023,
+      "place": "汶萊",
+      "lat": 4.4137155,
+      "lon": 114.5653908,
+      "country": "Brunei"
+    },
+    {
+      "year": 2023,
+      "place": "葡萄牙",
+      "lat": 39.6621648,
+      "lon": -8.1353519,
+      "country": "Portugal"
+    },
+    {
+      "year": 2023,
+      "place": "中國浙江",
+      "lat": 29.0000001,
+      "lon": 119.9999999,
+      "country": "China"
+    },
+    {
+      "year": 2023,
+      "place": "巴基斯坦",
+      "lat": 30.3308401,
+      "lon": 71.247499,
+      "country": "Pakistan"
+    },
+    {
+      "year": 2023,
+      "place": "阿富汗",
+      "lat": 33.7680065,
+      "lon": 66.2385139,
+      "country": "Afghanistan"
+    },
+    {
+      "year": 2024,
+      "place": "伊朗",
+      "lat": 32.6475314,
+      "lon": 54.5643516,
+      "country": "Iran"
+    },
+    {
+      "year": 2024,
+      "place": "伊索比亞",
+      "lat": 10.2116702,
+      "lon": 38.6521203,
+      "country": "Ethiopia"
+    },
+    {
+      "year": 2024,
+      "place": "烏干達",
+      "lat": 1.5333554,
+      "lon": 32.2166578,
+      "country": "Uganda"
+    },
+    {
+      "year": 2024,
+      "place": "盧安達",
+      "lat": -1.9646631,
+      "lon": 30.0644358,
+      "country": "Rwanda"
+    },
+    {
+      "year": 2024,
+      "place": "蒲隆地",
+      "lat": -3.426449,
+      "lon": 29.9324519,
+      "country": "Burundi"
+    },
+    {
+      "year": 2024,
+      "place": "義大利",
+      "lat": 42.6384261,
+      "lon": 12.674297,
+      "country": "Italy"
+    },
+    {
+      "year": 2024,
+      "place": "摩洛哥",
+      "lat": 28.3347722,
+      "lon": -10.3713379,
+      "country": "Morocco"
+    },
+    {
+      "year": 2024,
+      "place": "西班牙",
+      "lat": 39.3260685,
+      "lon": -4.8379791,
+      "country": "Spain"
+    },
+    {
+      "year": 2024,
+      "place": "土耳其",
+      "lat": 39.294076,
+      "lon": 35.2316631,
+      "country": "Turkey"
+    },
+    {
+      "year": 2024,
+      "place": "納米比亞",
+      "lat": -23.2335499,
+      "lon": 17.3231107,
+      "country": "Namibia"
+    },
+    {
+      "year": 2024,
+      "place": "莫三比克",
+      "lat": -19.302233,
+      "lon": 34.9144977,
+      "country": "Mozambique"
+    },
+    {
+      "year": 2024,
+      "place": "史瓦帝尼",
+      "lat": -26.5624806,
+      "lon": 31.3991317,
+      "country": "Eswatini"
+    },
+    {
+      "year": 2024,
+      "place": "賴索托",
+      "lat": -29.6039267,
+      "lon": 28.3350193,
+      "country": "Lesotho"
+    },
+    {
+      "year": 2024,
+      "place": "馬拉威",
+      "lat": -13.2687204,
+      "lon": 33.9301963,
+      "country": "Malawi"
+    },
+    {
+      "year": 2024,
+      "place": "南非",
+      "lat": -28.8166236,
+      "lon": 24.991639,
+      "country": "South Africa"
+    },
+    {
+      "year": 2025,
+      "place": "紐西蘭",
+      "lat": -41.5000831,
+      "lon": 172.8344077,
+      "country": "New Zealand"
+    },
+    {
+      "year": 2025,
+      "place": "中國貴州",
+      "lat": 27.0,
+      "lon": 107.0,
+      "country": "China"
+    },
+    {
+      "year": 2025,
+      "place": "中國內蒙古",
+      "lat": 43.2443242,
+      "lon": 114.3251664,
+      "country": "China"
+    },
+    {
+      "year": 2025,
+      "place": "中國黑龍江",
+      "lat": 48.4919244,
+      "lon": 127.5737708,
+      "country": "China"
+    },
+    {
+      "year": 2025,
+      "place": "挪威",
+      "lat": 61.1529386,
+      "lon": 8.7876653,
+      "country": "Norway"
+    },
+    {
+      "year": 2025,
+      "place": "冰島",
+      "lat": 64.9841821,
+      "lon": -18.1059013,
+      "country": "Iceland"
+    },
+    {
+      "year": 2025,
+      "place": "越南",
+      "lat": 15.9266657,
+      "lon": 107.9650855,
+      "country": "Vietnam"
+    },
+    {
+      "year": 2026,
+      "place": "南太平洋",
+      "lat": -45.0,
+      "lon": -130.0,
+      "country": "South Pacific Ocean"
+    },
+    {
+      "year": 2026,
+      "place": "伊拉克",
+      "lat": 33.0955793,
+      "lon": 44.1749775,
+      "country": "Iraq"
+    },
+    {
+      "year": 2026,
+      "place": "黎巴嫩",
+      "lat": 33.8750629,
+      "lon": 35.843409,
+      "country": "Lebanon"
+    },
+    {
+      "year": 2026,
+      "place": "敘利亞",
+      "lat": 34.8147886,
+      "lon": 38.4231781,
+      "country": "Syria"
+    }
+  ]
+}
