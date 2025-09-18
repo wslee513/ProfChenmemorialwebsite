@@ -2,7 +2,7 @@
   "title": {
     "text": "陳主惠老師紀念網頁",
     "styles": {
-      "font-size": "3.0rem",
+      "font-size": "2.8rem",
       "margin-bottom": "5px"
     }
   },
@@ -21,7 +21,7 @@
   },
   "links": [
     {
-      "text": "世界地圖",
+      "text": "老師的足跡",
       "url": "map.html",
       "is_external": false,
       "styles": {
@@ -29,7 +29,7 @@
       }
     },
     {
-      "text": "指導過的論文",
+      "text": "指導的論文",
       "url": "theses.html",
       "is_external": false,
       "styles": {
@@ -45,7 +45,7 @@
       }
     },
     {
-      "text": "來自大家的感恩",
+      "text": "大家的感恩",
       "url": "https://www.kudoboard.com/boards/q3MWBn65",
       "is_external": true,
       "styles": {
