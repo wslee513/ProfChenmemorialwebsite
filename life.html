@@ -1,164 +1,258 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <title>精彩的人生</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精彩的人生</title>
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background-color: #f4f4f9;
-      padding: 40px 20px;
-      margin: 0;
-    }
-    .header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    h1 { color: #2c3e50; }
-    .timeline {
-      position: relative;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .timeline::after {
-      content: '';
-      position: absolute;
-      width: 6px;
-      background-color: #e67e22;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -3px;
-    }
-    .timeline-item {
-      padding: 10px 40px;
-      position: relative;
-      background-color: inherit;
-      width: 50%;
-    }
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      right: -17px;
-      background-color: white;
-      border: 4px solid #e67e22;
-      top: 15px;
-      border-radius: 50%;
-      z-index: 1;
-    }
-    .left {
-      left: 0;
-    }
-    .right {
-      left: 50%;
-    }
-    .right::after {
-      left: -16px;
-    }
-    .content {
-      padding: 20px 30px;
-      background-color: white;
-      position: relative;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .content h2 {
-      margin-top: 0;
-      color: #34495e;
-    }
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+  .home-link-container {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .home-link {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .home-link:hover {
+    color: #fff;
+    background-color: #3498db;
+    text-decoration: none;
+  }
+  .timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+  }  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #2196F3;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+  }
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #2196F3;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .left {
+    left: 0;
+  }
+  .right {
+    left: 50%;
+  }
+  .left::after {
+    right: -12.5px;
+  }
+  .right::after {
+    left: -12.5px;
+  }
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid;
+    border-width: 10px 0 10px 10px;
+  }
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid;
+    border-width: 10px 10px 10px 0;
+  }
+  .content {
+    padding: 20px 30px;
+    position: relative;
+    border-radius: 6px;
+    background-color: white;
+    border: 2px solid;
+  }
+  .content h2 {
+    margin-top: 0;
+  }
+  .icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2em;
+  }
+  .color-1 { border-color: #4dd0e1; color: #4dd0e1; }
+  .color-2 { border-color: #ba68c8; color: #ba68c8; }
+  .color-3 { border-color: #ffd54f; color: #ffd54f; }
+  .color-4 { border-color: #aed581; color: #aed581; }
+  .color-5 { border-color: #ff8a65; color: #ff8a65; }
+  .left.color-1::before { border-color: transparent transparent transparent #4dd0e1; }
+  .right.color-1::before { border-color: transparent #4dd0e1 transparent transparent; }
+  .left.color-2::before { border-color: transparent transparent transparent #ba68c8; }
+  .right.color-2::before { border-color: transparent #ba68c8 transparent transparent; }
+  .left.color-3::before { border-color: transparent transparent transparent #ffd54f; }
+  .right.color-3::before { border-color: transparent #ffd54f transparent transparent; }
+  .left.color-4::before { border-color: transparent transparent transparent #aed581; }
+  .right.color-4::before { border-color: transparent #aed581 transparent transparent; }
+  .left.color-5::before { border-color: transparent transparent transparent #ff8a65; }
+  .right.color-5::before { border-color: transparent #ff8a65 transparent transparent; }
+
+
+  @media screen and (max-width: 600px) {
     .home-link {
-      display: inline-block;
-      margin-top: 30px;
-      color: #3498db;
-      text-decoration: none;
-    }
-    .home-link:hover {
-        text-decoration: underline;
-    }
-    @media (max-width: 768px) {
-      .home-link {
         padding: 10px 16px;
         font-size: 1.1rem;
         background-color: #007bff;
         color: white;
         border-radius: 5px;
-      }
-      .home-link:hover {
+    }
+    .home-link:hover {
         text-decoration: none;
         background-color: #0056b3;
-      }
     }
-  </style>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9H225N2CYJ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-9H225N2CYJ');
-  </script>
-<style>
-            @media (max-width: 768px) {
-                .main-header h1 {
-                    font-size: 1.5rem;
-                }
-                .main-header .home-link {
-                    padding: 10px 16px;
-                    font-size: 1.1rem;
-                    background-color: #007bff;
-                    color: white;
-                    border-radius: 5px;
-                }
-                .main-header .home-link:hover {
-                    text-decoration: none;
-                    background-color: #0056b3;
-                }
-            }
-        </style>
-    </head>
+    .timeline::after {
+      left: 31px;
+    }
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+    .left, .right {
+      left: 0%;
+    }
+    .left::after, .right::after {
+      left: 18.5px;
+    }
+    .left::before, .right::before {
+      left: 60px;
+      border: medium solid;
+      border-width: 10px 10px 10px 0;
+    }
+    .left.color-1::before, .right.color-1::before { border-color: transparent #4dd0e1 transparent transparent; }
+    .left.color-2::before, .right.color-2::before { border-color: transparent #ba68c8 transparent transparent; }
+    .left.color-3::before, .right.color-3::before { border-color: transparent #ffd54f transparent transparent; }
+    .left.color-4::before, .right.color-4::before { border-color: transparent #aed581 transparent transparent; }
+    .left.color-5::before, .right.color-5::before { border-color: transparent #ff8a65 transparent transparent; }
+  }
+</style>
+</head>
 <body>
-  <div class="header">
-    <h1>精彩的人生</h1>
-    <a href="index.html" class="home-link">&larr; 返回首頁</a>
-  </div>
-  
-  <!-- Timeline container -->
-  <div class="timeline" id="timeline-container"></div>
 
-  <div style="text-align: center; padding: 20px 0;">
-    <a href="index.html" class="home-link">&larr; 返回首頁</a>
-  </div>
+<h1 style="text-align:center;">精彩的人生</h1>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('life_events.json')
-        .then(response => response.json())
-        .then(data => {
-          const container = document.getElementById('timeline-container');
-          let timelineHtml = '';
-          data.forEach((item, index) => {
-            const side = index % 2 === 0 ? 'left' : 'right';
-            timelineHtml += `
-              <div class="timeline-item ${side}">
-                <div class="content">
-                  <h2>${item.year}</h2>
-                  <p>${item.event}</p>
-                </div>
-              </div>
-            `;
-          });
-          container.innerHTML = timelineHtml;
-        })
-        .catch(error => {
-          console.error('Error loading timeline data:', error);
-          const container = document.getElementById('timeline-container');
-          container.innerHTML = '<p style="text-align:center;">無法載入時間軸資料。</p>';
-        });
-    });
-  </script>
+<div class="home-link-container">
+  <a href="index.html" class="home-link">&larr; 返回首頁</a>
+</div>
+
+<div class="timeline" id="timeline">
+</div>
+
+<script>
+const lifeEvents = [
+  { "year": "1951.2", "event": "出生於台灣高雄，開啟了精彩人生的序幕。" },
+  { "year": "1958.9", "event": "入學高雄忠孝國小，啟蒙的重要階段。" },
+  { "year": "1962.9", "event": "進入高雄市立二中初中部，開始青澀的中學生活。" },
+  { "year": "1965.9", "event": "考取省立臺南一中，多士陶鎔! (編按：詳臺南一中校歌~)。" },
+  { "year": "1968.6", "event": "省立臺南一中畢業，臺南一中~無負鄭成功! (編按：詳臺南一中校歌~)。" },
+  { "year": "1971.7", "event": "畢業於台北工專三年制土木工程科，土木技術初養成。" },
+  { "year": "1972.9", "event": "進入臺灣大學農業工程學系，成為大學新鮮人。" },
+  { "year": "1976.6", "event": "取得臺灣大學農業工程系學士，同年進入研究所攻讀碩士學位。" },
+  { "year": "1978.6", "event": "取得臺灣大學農業工程學硏究所碩士，題目：區域性參數與極值水量推估之硏究，指導教授為易任。" },
+  { "year": "1978.8", "event": "擔任中國市政專校專任講師，傳道授業。" },
+  { "year": "1981.8", "event": "擔任中國市政專校專任副教授，更上一層樓。" },
+  { "year": "1981.10", "event": "和師母結婚，人生找到正確航道，婚姻幸福，事業突破!" },
+  { "year": "1982.8", "event": "中國市政專校專任副教授兼土木工程科主任。" },
+  { "year": "1984.8", "event": "中國工商專校專任副教授兼土木工程科主任。" },
+  { "year": "1986.8", "event": "中國工商專校專任副教授兼圖書館主任。" },
+  { "year": "1987.2", "event": "赴美國康乃爾大學土木與環境工程研究所深造，開啟了在水利工程領域的卓越研究生涯，專攻非飽和地下水、蒸發散、數值分析、水文統計以及水資源工程。" },
+  { "year": "1995.5", "event": "取得康乃爾大學土木與環境工程研究所博士學位，留於校內擔任博士後研究。" },
+  { "year": "1996.6", "event": "載譽歸國，回歸中國工商專校任教，將畢生所學傾囊相授，作育英才無數，深受學生愛戴。" },
+  { "year": "2000.8", "event": "研究大爆發，發表著作無數，榮昇中國技術學院教授。" },
+  { "year": "2005.8", "event": "卓越研究能力深受肯定，擔任教授兼規劃與設計學院院長。" },
+  { "year": "2017.7", "event": "光榮退休，來自各方的祝福與感謝，彙編成紀念刊，見證了其桃李滿天下的輝煌成就。" },
+  { "year": "2018.1", "event": "與師母一同享受退休生活，繼續遊歷世界，探索未知的風景。" },
+  { "year": "2025.9", "event": "於挪威卑爾根羽化為天使，展開另一段旅程。" }
+];
+
+function getIconForEvent(eventText) {
+  if (eventText.includes("出生")) return "🎉";
+  if (eventText.includes("畢業") || eventText.includes("學士") || eventText.includes("碩士") || eventText.includes("博士") || eventText.includes("考取") || eventText.includes("入學")) return "🎓";
+  if (eventText.includes("講師") || eventText.includes("副教授") || eventText.includes("主任") || eventText.includes("院長") || eventText.includes("任教") || eventText.includes("研究")) return "💼";
+  if (eventText.includes("結婚")) return "💍";
+  if (eventText.includes("赴美") || eventText.includes("遊歷世界")) return "✈️";
+  if (eventText.includes("退休")) return "🏖️";
+  if (eventText.includes("天使")) return "👼";
+  return "⭐";
+}
+
+const timeline = document.getElementById('timeline');
+const colors = ['color-1', 'color-2', 'color-3', 'color-4', 'color-5'];
+
+lifeEvents.forEach((event, index) => {
+  const container = document.createElement('div');
+  container.classList.add('container');
+  container.classList.add(index % 2 === 0 ? 'left' : 'right');
+  container.classList.add(colors[index % colors.length]);
+
+  const content = document.createElement('div');
+  content.classList.add('content');
+  content.classList.add(colors[index % colors.length]);
+
+
+  const year = document.createElement('h2');
+  year.textContent = event.year;
+
+  const eventText = document.createElement('p');
+  eventText.textContent = event.event;
+  eventText.style.color = '#333'; // Set text color back to dark
+
+  const icon = document.createElement('div');
+  icon.classList.add('icon');
+  icon.textContent = getIconForEvent(event.event);
+
+  content.appendChild(year);
+  content.appendChild(eventText);
+  content.appendChild(icon);
+  container.appendChild(content);
+  timeline.appendChild(container);
+});
+</script>
+
+<div class="home-link-container">
+  <a href="index.html" class="home-link">&larr; 返回首頁</a>
+</div>
+
 </body>
 </html>
