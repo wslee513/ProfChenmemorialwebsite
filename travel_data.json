@@ -2,6 +2,181 @@
   "title": "陳主惠和鄭亞薇的世界足跡",
   "locations": [
     {
+      "year": 1989,
+      "place": "緬因州 (Maine) 阿卡迪亞國家公園",
+      "lat": 44.3563115,
+      "lon": -68.2154787,
+      "country": "United States"
+    },
+    {
+      "year": 1994,
+      "place": "猶他州 (Utah) 拱門國家公園",
+      "lat": 38.7265253,
+      "lon": -109.5630201,
+      "country": "United States"
+    },
+    {
+      "year": 1987,
+      "place": "南達科他州 (South Dakota) 惡地國家公園",
+      "lat": 43.5271059,
+      "lon": -102.3616629,
+      "country": "United States"
+    },
+    {
+      "year": 1989,
+      "place": "德克薩斯州 (Texas) 大彎國家公園",
+      "lat": 29.3332484,
+      "lon": -103.1941721,
+      "country": "United States"
+    },
+    {
+      "year": 1990,
+      "place": "佛羅里達州 (Florida) 比斯坎國家公園",
+      "lat": 25.5031224,
+      "lon": -80.2348496,
+      "country": "United States"
+    },
+    {
+      "year": 1990,
+      "place": "科羅拉多州 (Colorado) 甘尼森國家公園黑峽谷",
+      "lat": 38.5798065,
+      "lon": -107.743697,
+      "country": "United States"
+    },
+    {
+      "year": 1995,
+      "place": "新墨西哥州 (New Mexico) 卡爾斯巴德洞窟國家公園",
+      "lat": 32.1212489,
+      "lon": -104.6012306,
+      "country": "United States"
+    },
+    {
+      "year": 1988,
+      "place": "加利福尼亞州 (California) 海峽群島國家公園",
+      "lat": 33.9663722,
+      "lon": -120.0954204,
+      "country": "United States"
+    },
+    {
+      "year": 1987,
+      "place": "南卡羅來納州 (South Carolina) 康加里國家公園",
+      "lat": 33.7941554,
+      "lon": -80.7636521,
+      "country": "United States"
+    },
+    {
+      "year": 1996,
+      "place": "俄勒岡州 (Oregon) 火山口湖國家公園",
+      "lat": 42.931692,
+      "lon": -122.1278905,
+      "country": "United States"
+    },
+    {
+      "year": 1988,
+      "place": "俄亥俄州 (Ohio) 庫雅荷加谷國家公園",
+      "lat": 41.2550938,
+      "lon": -81.5376417,
+      "country": "United States"
+    },
+    {
+      "year": 1989,
+      "place": "密蘇里州 (Missouri) 聖路易斯拱門國家公園",
+      "lat": 38.6245067,
+      "lon": -90.1856833,
+      "country": "United States"
+    },
+    {
+      "year": 1991,
+      "place": "蒙大拿州 (Montana) 冰川國家公園",
+      "lat": 48.6174862,
+      "lon": -113.7608851,
+      "country": "United States"
+    },
+    {
+      "year": 1995,
+      "place": "亞利桑那州 (Arizona) 大峽谷國家公園",
+      "lat": 36.3078548,
+      "lon": -112.292896,
+      "country": "United States"
+    },
+    {
+      "year": 1988,
+      "place": "懷俄明州 (Wyoming) 大蒂頓國家公園",
+      "lat": 43.8105668,
+      "lon": -110.6487948,
+      "country": "United States"
+    },
+    {
+      "year": 1993,
+      "place": "內華達州 (Nevada) 大盆地國家公園",
+      "lat": 38.9441564,
+      "lon": -114.2349457,
+      "country": "United States"
+    },
+    {
+      "year": 1988,
+      "place": "阿肯色州 (Arkansas) 溫泉國家公園",
+      "lat": 34.5290712,
+      "lon": -93.0301402,
+      "country": "United States"
+    },
+    {
+      "year": 1996,
+      "place": "印第安納州 (Indiana) 印第安納沙丘國家公園",
+      "lat": 41.6152664,
+      "lon": -87.2072619,
+      "country": "United States"
+    },
+    {
+      "year": 1995,
+      "place": "密西根州 (Michigan) 懷特島國家公園（羅亞爾島國家公園）",
+      "lat": 48.0073825,
+      "lon": -88.8289875,
+      "country": "United States"
+    },
+    {
+      "year": 1996,
+      "place": "肯塔基州 (Kentucky) 猛獁洞國家公園",
+      "lat": 37.1841693,
+      "lon": -86.122991,
+      "country": "United States"
+    },
+    {
+      "year": 1993,
+      "place": "華盛頓州 (Washington) 雷尼爾山國家公園",
+      "lat": 46.854338,
+      "lon": -121.7063343,
+      "country": "United States"
+    },
+    {
+      "year": 1993,
+      "place": "西維吉尼亞州 (West Virginia) 新河峽谷國家公園",
+      "lat": 38.0696066,
+      "lon": -81.080174,
+      "country": "United States"
+    },
+    {
+      "year": 1987,
+      "place": "維吉尼亞州 (Virginia) 仙納度國家公園",
+      "lat": 38.4719668,
+      "lon": -78.4636973,
+      "country": "United States"
+    },
+    {
+      "year": 1995,
+      "place": "北達科他州 (North Dakota) 狄奧多·羅斯福國家公園",
+      "lat": 46.9584776,
+      "lon": -103.4650052,
+      "country": "United States"
+    },
+    {
+      "year": 1991,
+      "place": "明尼蘇達州 (Minnesota) 沃亞哲國家公園",
+      "lat": 48.465549,
+      "lon": -92.8853973,
+      "country": "United States"
+    },
+	{
       "year": 1997,
       "place": "印尼",
       "lat": -2.4833826,
