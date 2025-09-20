@@ -174,7 +174,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const map = L.map('map').setView([25, 121], 2);
-            L.tileLayer('//maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png?lang=zh-tw', {
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 18,
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
