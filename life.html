@@ -106,6 +106,22 @@
   .content h2 {
     margin-top: 0;
   }
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+  }
+  .image-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .image-gallery img:hover {
+    transform: scale(1.05);
+  }
   .icon {
     position: absolute;
     top: 15px;
@@ -228,6 +244,19 @@ document.addEventListener('DOMContentLoaded', function() {
         content.appendChild(year);
         content.appendChild(eventText);
         content.appendChild(icon);
+
+        if (event.image && Array.isArray(event.image) && event.image.length > 0) {
+          const gallery = document.createElement('div');
+          gallery.className = 'image-gallery';
+          event.image.forEach(imagePath => {
+            const img = document.createElement('img');
+            img.src = imagePath;
+            img.alt = event.event;
+            gallery.appendChild(img);
+          });
+          content.appendChild(gallery);
+        }
+
         container.appendChild(content);
         timeline.appendChild(container);
       });
