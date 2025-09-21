@@ -180,73 +180,62 @@
 </div>
 
 <script>
-const lifeEvents = [
-  { "year": "1951.2", "event": "出生於台灣高雄，開啟了精彩人生的序幕。" },
-  { "year": "1958.9", "event": "入學高雄忠孝國小，啟蒙的重要階段。" },
-  { "year": "1962.9", "event": "進入高雄市立二中初中部，開始青澀的中學生活。" },
-  { "year": "1965.9", "event": "考取省立臺南一中，多士陶鎔! (編按：詳臺南一中校歌~)。" },
-  { "year": "1968.6", "event": "省立臺南一中畢業，臺南一中~無負鄭成功! (編按：詳臺南一中校歌~)。" },
-  { "year": "1971.7", "event": "畢業於台北工專三年制土木工程科，土木技術初養成。" },
-  { "year": "1972.9", "event": "進入臺灣大學農業工程學系，成為大學新鮮人。" },
-  { "year": "1976.6", "event": "取得臺灣大學農業工程系學士，同年進入研究所攻讀碩士學位。" },
-  { "year": "1978.6", "event": "取得臺灣大學農業工程學硏究所碩士，題目：區域性參數與極值水量推估之硏究，指導教授為易任。" },
-  { "year": "1978.8", "event": "擔任中國市政專校專任講師，傳道授業。" },
-  { "year": "1981.8", "event": "擔任中國市政專校專任副教授，更上一層樓。" },
-  { "year": "1981.10", "event": "和師母結婚，人生找到正確航道，婚姻幸福，事業突破!" },
-  { "year": "1982.8", "event": "中國市政專校專任副教授兼土木工程科主任。" },
-  { "year": "1984.8", "event": "中國工商專校專任副教授兼土木工程科主任。" },
-  { "year": "1986.8", "event": "中國工商專校專任副教授兼圖書館主任。" },
-  { "year": "1987.2", "event": "赴美國康乃爾大學土木與環境工程研究所深造，開啟了在水利工程領域的卓越研究生涯，專攻非飽和地下水、蒸發散、數值分析、水文統計以及水資源工程。" },
-  { "year": "1995.5", "event": "取得康乃爾大學土木與環境工程研究所博士學位，留於校內擔任博士後研究。" },
-  { "year": "1996.6", "event": "載譽歸國，回歸中國工商專校任教，將畢生所學傾囊相授，作育英才無數，深受學生愛戴。" },
-  { "year": "2000.8", "event": "研究大爆發，發表著作無數，榮昇中國技術學院教授。" },
-  { "year": "2005.8", "event": "卓越研究能力深受肯定，擔任教授兼規劃與設計學院院長。" },
-  { "year": "2017.7", "event": "光榮退休，來自各方的祝福與感謝，彙編成紀念刊，見證了其桃李滿天下的輝煌成就。" },
-  { "year": "2018.1", "event": "與師母一同享受退休生活，繼續遊歷世界，探索未知的風景。" },
-  { "year": "2025.9", "event": "於挪威卑爾根羽化為天使，展開另一段旅程。" }
-];
+document.addEventListener('DOMContentLoaded', function() {
+  const timeline = document.getElementById('timeline');
 
-function getIconForEvent(eventText) {
-  if (eventText.includes("出生")) return "🎉";
-  if (eventText.includes("畢業") || eventText.includes("學士") || eventText.includes("碩士") || eventText.includes("博士") || eventText.includes("考取") || eventText.includes("入學")) return "🎓";
-  if (eventText.includes("講師") || eventText.includes("副教授") || eventText.includes("主任") || eventText.includes("院長") || eventText.includes("任教") || eventText.includes("研究")) return "💼";
-  if (eventText.includes("結婚")) return "💍";
-  if (eventText.includes("赴美") || eventText.includes("遊歷世界")) return "✈️";
-  if (eventText.includes("退休")) return "🏖️";
-  if (eventText.includes("天使")) return "👼";
-  return "⭐";
-}
+  function getIconForEvent(eventText) {
+    if (eventText.includes("出生")) return "🎉";
+    if (eventText.includes("畢業") || eventText.includes("學士") || eventText.includes("碩士") || eventText.includes("博士") || eventText.includes("考取") || eventText.includes("入學")) return "🎓";
+    if (eventText.includes("講師") || eventText.includes("副教授") || eventText.includes("主任") || eventText.includes("院長") || eventText.includes("任教") || eventText.includes("研究")) return "💼";
+    if (eventText.includes("結婚")) return "💍";
+    if (eventText.includes("赴美") || eventText.includes("遊歷世界")) return "✈️";
+    if (eventText.includes("退休")) return "🏖️";
+    if (eventText.includes("天使")) return "👼";
+    return "⭐";
+  }
 
-const timeline = document.getElementById('timeline');
-const colors = ['color-1', 'color-2', 'color-3', 'color-4', 'color-5'];
+  const colors = ['color-1', 'color-2', 'color-3', 'color-4', 'color-5'];
 
-lifeEvents.forEach((event, index) => {
-  const container = document.createElement('div');
-  container.classList.add('container');
-  container.classList.add(index % 2 === 0 ? 'left' : 'right');
-  container.classList.add(colors[index % colors.length]);
+  fetch('life_events.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(lifeEvents => {
+      lifeEvents.forEach((event, index) => {
+        const container = document.createElement('div');
+        container.classList.add('container');
+        container.classList.add(index % 2 === 0 ? 'left' : 'right');
+        container.classList.add(colors[index % colors.length]);
 
-  const content = document.createElement('div');
-  content.classList.add('content');
-  content.classList.add(colors[index % colors.length]);
+        const content = document.createElement('div');
+        content.classList.add('content');
+        content.classList.add(colors[index % colors.length]);
 
+        const year = document.createElement('h2');
+        year.textContent = event.year;
 
-  const year = document.createElement('h2');
-  year.textContent = event.year;
+        const eventText = document.createElement('p');
+        eventText.textContent = event.event;
+        eventText.style.color = '#333'; // Set text color back to dark
 
-  const eventText = document.createElement('p');
-  eventText.textContent = event.event;
-  eventText.style.color = '#333'; // Set text color back to dark
+        const icon = document.createElement('div');
+        icon.classList.add('icon');
+        icon.textContent = getIconForEvent(event.event);
 
-  const icon = document.createElement('div');
-  icon.classList.add('icon');
-  icon.textContent = getIconForEvent(event.event);
-
-  content.appendChild(year);
-  content.appendChild(eventText);
-  content.appendChild(icon);
-  container.appendChild(content);
-  timeline.appendChild(container);
+        content.appendChild(year);
+        content.appendChild(eventText);
+        content.appendChild(icon);
+        container.appendChild(content);
+        timeline.appendChild(container);
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching or parsing data:', error);
+      timeline.innerHTML = `<p style="color:red; text-align:center;">資料載入失敗: ${error.message}</p>`;
+    });
 });
 </script>
 
