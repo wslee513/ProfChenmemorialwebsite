@@ -1,243 +1,286 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <title>指導過的論文</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
-  <style>
-    body { 
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background-color: #f4f4f9;
-      padding: 20px;
-      margin: 0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陳主惠老師指導過的論文</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  h1 {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  .collapsible-btn {
+    background-color: transparent;
+    color: #0056b3;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 1px solid #0056b3;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    position: relative;
+  }
+  .collapsible-btn:hover, .collapsible-btn.active {
+    background-color: #f0f2f5;
+    color: #004494;
+  }
+  .collapsible-btn::after {
+    content: '+';
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .collapsible-btn.active::after {
+    content: '−';
+  }
+  .collapsible-content {
+    padding: 10px 18px;
+    display: none;
+    overflow: hidden;
+    background-color: transparent;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+  }
+  .tribute-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    background-color: #fff;
+  }
+  .tribute-card h3 {
+    margin-top: 0;
+    color: #343a40;
+  }
+  .tribute-card p {
+    white-space: pre-wrap;
+    line-height: 1.6;
+  }
+  .tribute-card .author {
+    text-align: right;
+    font-style: italic;
+    color: #6c757d;
+  }
+  .tribute-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  .theses-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  .theses-table th, .theses-table td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: left;
+  }
+  .theses-table th {
+    background-color: #e9ecef;
+    font-weight: 600;
+  }
+  .theses-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  .theses-table tbody tr:hover {
+    background-color: #e2e6ea;
+    cursor: pointer;
+  }
+  .summary-count {
+    text-align: center;
+    font-weight: bold;
+    color: #6c757d;
+    margin: 10px 0;
+  }
+  .publications-list {
+    list-style-type: decimal;
+    padding: 20px;
+    margin: 0;
+  }
+  .publications-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .home-link-container {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .home-link {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .home-link:hover {
+    color: #fff;
+    background-color: #3498db;
+    text-decoration: none;
+  }
+  @media screen and (max-width: 768px) {
     .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 15px;
     }
-    h1, h2 {
-      color: #2c3e50; 
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    .tributes {
-      margin: 30px 0;
-      padding: 20px;
-      background-color: #fdfdfd;
-      border-left: 5px solid #e67e22;
-    }
-    .tribute-card {
-      margin-bottom: 25px;
-    }
-    .tribute-card h2 {
-      font-size: 1.4rem;
-      color: #34495e;
-      margin-bottom: 10px;
-      text-align: left;
-    }
-    .tribute-card p {
-      line-height: 1.7;
-      color: #555;
-      text-align: justify;
-    }
-    .tribute-card .author {
-      text-align: right;
-      font-style: italic;
-      color: #7f8c8d;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-    th, td {
-      padding: 12px 15px;
-      border: 1px solid #ddd;
-      text-align: left;
-    }
-    thead {
-      background-color: #34495e;
-      color: white;
-    }
-    tbody tr:nth-child(even) {
-      background-color: #f8f9fa;
-    }
-    tbody tr:hover {
-      background-color: #ecf0f1;
+    .theses-table th, .theses-table td {
+      padding: 8px;
+      font-size: 0.9rem;
     }
     .home-link {
-      display: block;
-      text-align: center;
-      margin-top: 30px;
-      color: #3498db;
-      text-decoration: none;
-    }
-    .home-link:hover {
-      text-decoration: underline;
-    }
-    @media (max-width: 768px) {
-      .home-link {
-        padding: 12px;
+        padding: 10px 16px;
         font-size: 1.1rem;
         background-color: #007bff;
         color: white;
         border-radius: 5px;
-      }
-      .home-link:hover {
+    }
+    .home-link:hover {
         text-decoration: none;
         background-color: #0056b3;
-      }
     }
-  </style>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9H225N2CYJ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-9H225N2CYJ');
-  </script>
-<style>
-            @media (max-width: 768px) {
-                .main-header h1 {
-                    font-size: 1.5rem;
-                }
-                .main-header .home-link {
-                    padding: 10px 16px;
-                    font-size: 1.1rem;
-                    background-color: #007bff;
-                    color: white;
-                    border-radius: 5px;
-                }
-                .main-header .home-link:hover {
-                    text-decoration: none;
-                    background-color: #0056b3;
-                }
-            }
-        </style>
-    </head>
+  }
+</style>
+</head>
 <body>
-  <div class="container">
-    <h1>陳主惠老師指導過的論文</h1>
-    <a href="index.html" class="home-link" style="margin-top: 15px; margin-bottom: 30px;">&larr; 返回首頁</a>
-    <div class="tributes"></div>
-    <p id="thesis-count" style="text-align: center; font-size: 1.1rem; color: #555;"></p>
-    <table id="theses-table">
-      <thead>
-        <tr>
-          <th style="width:10%;">學年度</th>
-          <th style="width:15%;">研究生</th>
-          <th>論文題目</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
 
-    <h2 style="text-align: center; margin-top: 40px;">發表期刋研討會等著作</h2>
-    <table id="publications-table">
-      <thead>
-        <tr>
-          <th style="width:10%;">項次</th>
-          <th>著作資訊</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-
+<div class="container">
+  <h1>陳主惠老師指導過的論文</h1>
+  <div class="home-link-container">
     <a href="index.html" class="home-link">&larr; 返回首頁</a>
   </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('tributes_and_theses.json', { cache: 'no-store' })
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+  <div class="collapsible">
+    <button type="button" class="collapsible-btn active">陳老師榮退紀念</button>
+    <div class="collapsible-content" style="display: block;">
+      <div id="tributes-content"></div>
+    </div>
+  </div>
+
+  <div class="collapsible">
+    <button type="button" class="collapsible-btn">指導論文</button>
+    <div class="collapsible-content">
+      <div id="theses-count" class="summary-count"></div>
+      <table class="theses-table">
+        <thead>
+          <tr>
+            <th>年度</th>
+            <th>學生</th>
+            <th>論文題目</th>
+          </tr>
+        </thead>
+        <tbody id="theses-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="collapsible">
+    <button type="button" class="collapsible-btn">著作</button>
+    <div class="collapsible-content">
+      <ul class="publications-list" id="publications-list"></ul>
+    </div>
+  </div>
+
+  <div class="home-link-container" style="padding-top: 40px;">
+    <a href="index.html" class="home-link">&larr; 返回首頁</a>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tributesContent = document.getElementById('tributes-content');
+  const thesesTbody = document.getElementById('theses-tbody');
+  const publicationsList = document.getElementById('publications-list');
+
+  fetch('tributes_and_theses.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+      // Populate Tributes
+      if (data.tributes) {
+        data.tributes.forEach(tribute => {
+          const card = document.createElement('div');
+          card.className = 'tribute-card';
+          let imagesHTML = '';
+          if (tribute.images && tribute.images.length > 0) {
+            tribute.images.forEach(img => {
+              imagesHTML += `<img src="${img}" alt="Tribute image">`;
+            });
           }
-          return response.json();
-        })
-        .then(data => {
-          populateTributes(data.tributes);
-          populateTheses(data.theses);
-          populatePublications(data.publications);
-        })
-        .catch(error => {
-          console.error('Could not load data:', error);
-          document.querySelector('.container').innerHTML = '<h1>資料載入失敗</h1><p>無法讀取 JSON 資料檔，請確認檔案是否存在且格式正確。</p><a href="index.html">返回首頁</a>';
+          card.innerHTML = `<h3>${tribute.title}</h3><p>${tribute.body}</p><div class="author">${tribute.author}</div>${imagesHTML}`;
+          tributesContent.appendChild(card);
         });
+      }
+
+      // Populate Theses
+      if (data.theses) {
+        const thesesCount = data.theses.length;
+        document.getElementById('theses-count').textContent = `共計 ${thesesCount} 篇論文`;
+
+        data.theses.forEach(thesis => {
+          const row = document.createElement('tr');
+          row.innerHTML = `<td>${thesis.year}</td><td>${thesis.student}</td><td>${thesis.title}</td>`;
+          thesesTbody.appendChild(row);
+        });
+      }
+
+      // Populate Publications
+      if (data.publications) {
+        data.publications.forEach(publication => {
+          const listItem = document.createElement('li');
+          listItem.textContent = publication;
+          publicationsList.appendChild(listItem);
+        });
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+      document.querySelector('.container').innerHTML = `<h1>資料載入失敗</h1><p>無法讀取 tributes_and_theses.json 檔案。請確認檔案存在且格式正確。</p><p style="color:red;">${error}</p>`;
     });
 
-    function populateTributes(tributes) {
-      if (!tributes || !Array.isArray(tributes)) return;
-      const tributesContainer = document.querySelector('.tributes');
-      let tributesHtml = '';
-      tributes.forEach(tribute => {
-        tributesHtml += `
-          <article class="tribute-card">
-            <h2>${tribute.title}</h2>`;
-
-        if (tribute.images && tribute.images.length > 1) {
-            tributesHtml += `<div class="image-flex-container" style="display:flex; justify-content:center; gap:10px; margin: 15px auto; flex-wrap: wrap;">`;
-            tribute.images.forEach(img_src => {
-                tributesHtml += `<img src="${img_src}" alt="祝福照片" style="width:48%; max-width:400px; border-radius:5px; min-width: 300px;">`;
-            });
-            tributesHtml += `</div>`;
-        } else if (tribute.images && tribute.images.length === 1) {
-            tributesHtml += `<img src="${tribute.images[0]}" alt="祝福照片" style="width:100%; max-width:600px; border-radius:5px; margin: 15px auto; display:block;">`;
-        }
-
-        tributesHtml += `<p>${tribute.body.replace(/\n/g, '<br>')}</p>
-                       <p class="author">${tribute.author}</p>
-          </article>
-        `;
-      });
-      tributesContainer.innerHTML = tributesHtml;
-    }
-
-    function populateTheses(theses) {
-      if (!theses || !Array.isArray(theses)) return;
-      const thesisCount = document.getElementById('thesis-count');
-      const tableBody = document.querySelector('#theses-table tbody');
-      let tableHtml = '';
-
-      if (theses.length > 0) {
-        thesisCount.textContent = `共計 ${theses.length} 篇論文`;
-        theses.forEach(thesis => {
-          tableHtml += `
-            <tr>
-              <td>${thesis.year}</td>
-              <td>${thesis.student}</td>
-              <td>${thesis.title}</td>
-            </tr>
-          `;
-        });
-        tableBody.innerHTML = tableHtml;
+  const coll = document.getElementsByClassName("collapsible-btn");
+  for (let i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
       } else {
-        thesisCount.textContent = '沒有論文資料';
+        content.style.display = "block";
       }
-    }
-
-    function populatePublications(publications) {
-      if (!publications || !Array.isArray(publications)) return;
-      const tableBody = document.querySelector('#publications-table tbody');
-      let tableHtml = '';
-      if (publications.length > 0) {
-        publications.forEach((pub, index) => {
-          tableHtml += `
-            <tr>
-              <td>${index + 1}</td>
-              <td>${pub}</td>
-            </tr>
-          `;
-        });
-        tableBody.innerHTML = tableHtml;
-      }
-    }
-  </script>
+    });
+  }
+});
+</script>
 </body>
 </html>
