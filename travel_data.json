@@ -3,9 +3,23 @@
   "locations": [
     {
       "year": 1951,
-      "place": "臺灣",
-      "lat": 23.9739374,
-      "lon": 120.9820179,
+      "place": "臺灣高雄",
+      "lat": 22.62174,
+      "lon": 120.28498,
+      "country": "Taiwan"
+    },
+    {
+      "year": 1965,
+      "place": "臺灣臺南",
+      "lat": 22.99417,
+      "lon": 120.21679,
+      "country": "Taiwan"
+    },
+    {
+      "year": 1968,
+      "place": "臺灣臺北",
+      "lat": 24.98539,
+      "lon": 121.56410,
       "country": "Taiwan"
     },
     {
