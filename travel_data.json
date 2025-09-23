@@ -2,6 +2,48 @@
   "title": "陳主惠和鄭亞薇的世界足跡",
   "locations": [
     {
+      "year": 1951,
+      "place": "臺灣",
+      "lat": 23.9739374,
+      "lon": 120.9820179,
+      "country": "Taiwan"
+    },
+    {
+      "year": 1983,
+      "place": "日本北海道",
+      "lat": 43.4519831,
+      "lon": 142.8197834,
+      "country": "Japan"
+    },
+    {
+      "year": 1983,
+      "place": "日本東京",
+      "lat": 35.6768601,
+      "lon": 139.7638947,
+      "country": "Japan"
+    },
+    {
+      "year": 1983,
+      "place": "日本京都",
+      "lat": 34.9853497,
+      "lon": 135.758766,
+      "country": "Japan"
+    },
+    {
+      "year": 1983,
+      "place": "韓國漢城",
+      "lat": 37.5666791,
+      "lon": 126.9782914,
+      "country": "South Korea"
+    },
+    {
+      "year": 1983,
+      "place": "韓國慶州",
+      "lat": 35.7982689,
+      "lon": 129.1389632,
+      "country": "South Korea"
+    },
+    {
       "year": 1989,
       "place": "緬因州 (Maine) 阿卡迪亞國家公園",
       "lat": 44.3563115,
@@ -176,7 +218,7 @@
       "lon": -92.8853973,
       "country": "United States"
     },
-	{
+    {
       "year": 1997,
       "place": "印尼",
       "lat": -2.4833826,
@@ -259,6 +301,13 @@
       "lat": 42.6384261,
       "lon": 12.674297,
       "country": "Italy"
+    },
+    {
+      "year": 2001,
+      "place": "梵蒂岡",
+      "lat": 41.9034912,
+      "lon": 12.4528349,
+      "country": "Vatican City"
     },
     {
       "year": 2002,
@@ -647,6 +696,13 @@
     },
     {
       "year": 2010,
+      "place": "法國",
+      "lat": 46.603354,
+      "lon": 1.8883335,
+      "country": "France"
+    },
+    {
+      "year": 2010,
       "place": "西班牙",
       "lat": 39.3260685,
       "lon": -4.8379791,
@@ -658,6 +714,13 @@
       "lat": 39.6621648,
       "lon": -8.1353519,
       "country": "Portugal"
+    },
+    {
+      "year": 2010,
+      "place": "摩洛哥",
+      "lat": 28.3347722,
+      "lon": -10.3713379,
+      "country": "Morocco"
     },
     {
       "year": 2010,
@@ -871,10 +934,24 @@
     },
     {
       "year": 2016,
+      "place": "印度加爾各答",
+      "lat": 22.5726459,
+      "lon": 88.3638953,
+      "country": "India"
+    },
+    {
+      "year": 2016,
       "place": "奧地利",
       "lat": 47.59397,
       "lon": 14.12456,
       "country": "Austria"
+    },
+    {
+      "year": 2016,
+      "place": "赫塞哥維納",
+      "lat": 43.8678039,
+      "lon": 18.4059508,
+      "country": "Bosnia and Herzegovina"
     },
     {
       "year": 2016,
@@ -997,6 +1074,20 @@
     },
     {
       "year": 2017,
+      "place": "墨西哥",
+      "lat": 23.6585116,
+      "lon": -102.0077097,
+      "country": "Mexico"
+    },
+    {
+      "year": 2017,
+      "place": "古巴",
+      "lat": 23.0131338,
+      "lon": -80.8328748,
+      "country": "Cuba"
+    },
+    {
+      "year": 2017,
       "place": "厄瓜多",
       "lat": -1.3397668,
       "lon": -79.3666965,
@@ -1057,6 +1148,20 @@
       "lat": 17.1204943,
       "lon": -88.6859028,
       "country": "Belize"
+    },
+    {
+      "year": 2018,
+      "place": "巴西里約熱內盧",
+      "lat": -22.9110137,
+      "lon": -43.2093727,
+      "country": "Brazil"
+    },
+    {
+      "year": 2018,
+      "place": "秘魯",
+      "lat": -6.8699697,
+      "lon": -75.0458515,
+      "country": "Peru"
     },
     {
       "year": 2018,
@@ -1270,6 +1375,118 @@
     },
     {
       "year": 2019,
+      "place": "多明尼加",
+      "lat": 19.0974031,
+      "lon": -70.3028026,
+      "country": "Dominican Republic"
+    },
+    {
+      "year": 2019,
+      "place": "巴巴多斯",
+      "lat": 13.1500331,
+      "lon": -59.5250305,
+      "country": "Barbados"
+    },
+    {
+      "year": 2019,
+      "place": "聖露西亞",
+      "lat": 13.9090439,
+      "lon": -60.9779241,
+      "country": "Saint Lucia"
+    },
+    {
+      "year": 2019,
+      "place": "安地卡及巴布達",
+      "lat": 17.2234721,
+      "lon": -61.9554608,
+      "country": "Antigua and Barbuda"
+    },
+    {
+      "year": 2019,
+      "place": "多米尼克",
+      "lat": 15.4113138,
+      "lon": -61.3653618,
+      "country": "Dominica"
+    },
+    {
+      "year": 2019,
+      "place": "聖克里斯多福及尼維斯",
+      "lat": 17.250512,
+      "lon": -62.6725973,
+      "country": "Saint Kitts and Nevis"
+    },
+    {
+      "year": 2019,
+      "place": "聖文森及格瑞那丁",
+      "lat": 12.90447,
+      "lon": -61.2765569,
+      "country": "Saint Vincent and the Grenadines"
+    },
+    {
+      "year": 2019,
+      "place": "格瑞那達",
+      "lat": 12.1360374,
+      "lon": -61.6904045,
+      "country": "Grenada"
+    },
+    {
+      "year": 2019,
+      "place": "牙買加",
+      "lat": 18.1850507,
+      "lon": -77.3947693,
+      "country": "Jamaica"
+    },
+    {
+      "year": 2019,
+      "place": "巴哈馬",
+      "lat": 24.7736546,
+      "lon": -78.0000547,
+      "country": "Bahamas"
+    },
+    {
+      "year": 2019,
+      "place": "千里達",
+      "lat": 35.1455403,
+      "lon": 136.8979647,
+      "country": "Japan"
+    },
+    {
+      "year": 2019,
+      "place": "波多黎各",
+      "lat": 18.2247706,
+      "lon": -66.4858295,
+      "country": "United States"
+    },
+    {
+      "year": 2019,
+      "place": "美屬維京群島聖托馬斯島Saint Thomas",
+      "lat": 18.33783,
+      "lon": -64.97126,
+      "country": "United States"
+    },
+    {
+      "year": 2019,
+      "place": "英屬維京群島托爾托拉島Tortola",
+      "lat": 18.44444,
+      "lon": -64.5372,
+      "country": "United Kingdom"
+    },
+    {
+      "year": 2019,
+      "place": "法屬聖馬丁島Saint-Martin",
+      "lat": 18.0732,
+      "lon": -63.05053,
+      "country": "France"
+    },
+    {
+      "year": 2019,
+      "place": "荷屬聖馬丁島",
+      "lat": 18.0178,
+      "lon": -63.05953,
+      "country": "Netherlands"
+    },
+    {
+      "year": 2019,
       "place": "中國雲南",
       "lat": 25.0,
       "lon": 102.0,
@@ -1368,6 +1585,20 @@
     },
     {
       "year": 2023,
+      "place": "挪威斯瓦巴群島Svalbard",
+      "lat": 78.79546,
+      "lon": 17.65095,
+      "country": "Norway"
+    },
+    {
+      "year": 2023,
+      "place": "挪威羅弗敦群島Lofoten",
+      "lat": 68.18936,
+      "lon": 13.73137,
+      "country": "Norway"
+    },
+    {
+      "year": 2023,
       "place": "中國浙江",
       "lat": 29.0000001,
       "lon": 119.9999999,
@@ -1386,6 +1617,41 @@
       "lat": 33.7680065,
       "lon": 66.2385139,
       "country": "Afghanistan"
+    },
+    {
+      "year": 2023,
+      "place": "科威特",
+      "lat": 29.2733964,
+      "lon": 47.4979476,
+      "country": "Kuwait"
+    },
+    {
+      "year": 2023,
+      "place": "卡達",
+      "lat": 25.3336984,
+      "lon": 51.2295295,
+      "country": "Qatar"
+    },
+    {
+      "year": 2023,
+      "place": "巴林王國",
+      "lat": 26.221145,
+      "lon": 50.582123,
+      "country": "Bahrain"
+    },
+    {
+      "year": 2023,
+      "place": "阿曼",
+      "lat": 21.0000287,
+      "lon": 57.0036901,
+      "country": "Oman"
+    },
+    {
+      "year": 2023,
+      "place": "阿拉伯聯合大公國",
+      "lat": 24.0002488,
+      "lon": 53.9994829,
+      "country": "United Arab Emirates"
     },
     {
       "year": 2024,
