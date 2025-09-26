@@ -25,7 +25,7 @@
       "url": "map.html",
       "is_external": false,
       "styles": {
-        "padding": "30px 30px"
+        "padding": "30px 5px"
       }
     },
     {
@@ -33,7 +33,7 @@
       "url": "theses.html",
       "is_external": false,
       "styles": {
-        "padding": "30px 30px"
+        "padding": "30px 5px"
       }
     },
     {
@@ -41,7 +41,7 @@
       "url": "life.html",
       "is_external": false,
       "styles": {
-        "padding": "30px 30px"
+        "padding": "30px 5px"
       }
     },
     {
@@ -49,7 +49,15 @@
       "url": "https://www.kudoboard.com/boards/q3MWBn65",
       "is_external": true,
       "styles": {
-        "padding": "30px 30px"
+        "padding": "30px 5px"
+      }
+    },
+    {
+      "text": "追思會剪輯",
+      "url": "memorial.html",
+      "is_external": false,
+      "styles": {
+        "padding": "30px 5px"
       }
     }
   ]

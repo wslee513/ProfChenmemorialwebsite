@@ -1,5 +1,12 @@
 {
   "title": "陳主惠和鄭亞薇的世界足跡",
+  "social_links": [
+    {
+      "name": "鄭亞薇的Facebook-最詳實的旅行紀錄",
+      "url": "https://www.facebook.com/yawei.cheng.7",
+      "icon": "fab fa-facebook"
+    }
+  ],
   "locations": [
     {
       "year": 1951,

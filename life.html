@@ -4,200 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>精彩的人生</title>
-  <style>
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fdfdfd;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-  }
-  .home-link-container {
-    text-align: center;
-    padding: 20px 0;
-  }
-  .home-link {
-    color: #3498db;
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  .home-link:hover {
-    color: #fff;
-    background-color: #3498db;
-    text-decoration: none;
-  }
-  .timeline {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-  }  .timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: #2196F3;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-  }
-  .container {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-    box-sizing: border-box;
-  }
-  .container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: white;
-    border: 4px solid #2196F3;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-  }
-  .left {
-    left: 0;
-  }
-  .right {
-    left: 50%;
-  }
-  .left::after {
-    right: -12.5px;
-  }
-  .right::after {
-    left: -12.5px;
-  }
-  .left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid;
-    border-width: 10px 0 10px 10px;
-  }
-  .right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid;
-    border-width: 10px 10px 10px 0;
-  }
-  .content {
-    padding: 20px 30px;
-    position: relative;
-    border-radius: 6px;
-    background-color: white;
-    border: 2px solid;
-  }
-  .content h2 {
-    margin-top: 0;
-  }
-  .image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    margin-top: 15px;
-  }
-  .image-gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  .image-gallery img:hover {
-    transform: scale(1.05);
-  }
-  .icon {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 2em;
-  }
-  .color-1 { border-color: #4dd0e1; color: #4dd0e1; }
-  .color-2 { border-color: #ba68c8; color: #ba68c8; }
-  .color-3 { border-color: #ffd54f; color: #ffd54f; }
-  .color-4 { border-color: #aed581; color: #aed581; }
-  .color-5 { border-color: #ff8a65; color: #ff8a65; }
-  .left.color-1::before { border-color: transparent transparent transparent #4dd0e1; }
-  .right.color-1::before { border-color: transparent #4dd0e1 transparent transparent; }
-  .left.color-2::before { border-color: transparent transparent transparent #ba68c8; }
-  .right.color-2::before { border-color: transparent #ba68c8 transparent transparent; }
-  .left.color-3::before { border-color: transparent transparent transparent #ffd54f; }
-  .right.color-3::before { border-color: transparent #ffd54f transparent transparent; }
-  .left.color-4::before { border-color: transparent transparent transparent #aed581; }
-  .right.color-4::before { border-color: transparent #aed581 transparent transparent; }
-  .left.color-5::before { border-color: transparent transparent transparent #ff8a65; }
-  .right.color-5::before { border-color: transparent #ff8a65 transparent transparent; }
-
-
-  @media screen and (max-width: 600px) {
-    .home-link {
-        padding: 10px 16px;
-        font-size: 1.1rem;
-        background-color: #007bff;
-        color: white;
-        border-radius: 5px;
-    }
-    .home-link:hover {
-        text-decoration: none;
-        background-color: #0056b3;
-    }
-    .timeline::after {
-      left: 31px;
-    }
-    .container {
-      width: 100%;
-      padding-left: 70px;
-      padding-right: 25px;
-    }
-    .left, .right {
-      left: 0%;
-    }
-    .left::after, .right::after {
-      left: 18.5px;
-    }
-    .left::before, .right::before {
-      left: 60px;
-      border: medium solid;
-      border-width: 10px 10px 10px 0;
-    }
-    .left.color-1::before, .right.color-1::before { border-color: transparent #4dd0e1 transparent transparent; }
-    .left.color-2::before, .right.color-2::before { border-color: transparent #ba68c8 transparent transparent; }
-    .left.color-3::before, .right.color-3::before { border-color: transparent #ffd54f transparent transparent; }
-    .left.color-4::before, .right.color-4::before { border-color: transparent #aed581 transparent transparent; }
-    .left.color-5::before, .right.color-5::before { border-color: transparent #ff8a65 transparent transparent; }
-  }
-</style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/life.css"> <!-- Link to original life.css -->
 </head>
 <body>
-
-<h1 style="text-align:center;">精彩的人生</h1>
+<h1 class="page-title" style="text-align:center;">精彩的人生</h1>
 
 <div class="home-link-container">
   <a href="index.html" class="home-link">&larr; 返回首頁</a>
 </div>
 
-<div class="timeline" id="timeline">
+<div class="timeline" id="timeline"> <!-- Changed id and class -->
+  <!-- New timeline content will be generated here by JavaScript -->
 </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const timeline = document.getElementById('timeline');
+  const timeline = document.getElementById('timeline'); // Changed id
 
   function getIconForEvent(eventText) {
     if (eventText.includes("出生")) return "🎉";
@@ -221,29 +46,27 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .then(lifeEvents => {
       lifeEvents.forEach((event, index) => {
-        const container = document.createElement('div');
-        container.classList.add('container');
-        container.classList.add(index % 2 === 0 ? 'left' : 'right');
-        container.classList.add(colors[index % colors.length]);
+        const timelineItem = document.createElement('div');
+        timelineItem.classList.add('timeline-item');
+        timelineItem.classList.add(index % 2 === 0 ? 'left' : 'right');
 
-        const content = document.createElement('div');
-        content.classList.add('content');
-        content.classList.add(colors[index % colors.length]);
+        const timelineContent = document.createElement('div');
+        timelineContent.classList.add('timeline-content');
+        timelineContent.classList.add(colors[index % colors.length]);
 
-        const year = document.createElement('h2');
+        const year = document.createElement('h3'); // Changed to h3 for consistency
         year.textContent = event.year;
 
         const eventText = document.createElement('p');
         eventText.textContent = event.event;
-        eventText.style.color = '#333'; // Set text color back to dark
 
         const icon = document.createElement('div');
         icon.classList.add('icon');
         icon.textContent = getIconForEvent(event.event);
 
-        content.appendChild(year);
-        content.appendChild(eventText);
-        content.appendChild(icon);
+        timelineContent.appendChild(year);
+        timelineContent.appendChild(eventText);
+        timelineContent.appendChild(icon);
 
         if (event.image && Array.isArray(event.image) && event.image.length > 0) {
           const gallery = document.createElement('div');
@@ -254,11 +77,11 @@ document.addEventListener('DOMContentLoaded', function() {
             img.alt = event.event;
             gallery.appendChild(img);
           });
-          content.appendChild(gallery);
+          timelineContent.appendChild(gallery);
         }
 
-        container.appendChild(content);
-        timeline.appendChild(container);
+        timelineItem.appendChild(timelineContent);
+        timeline.appendChild(timelineItem);
       });
     })
     .catch(error => {

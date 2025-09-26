@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>追思紀念</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/memorial.css?v=1.1">
+</head>
+<body>
+
+<header>
+  <h1 id="page-title" class="page-title"></h1>
+  <div class="home-link-container">
+    <a href="index.html" class="home-link">&larr; 返回首頁</a>
+  </div>
+</header>
+
+<div class="container" id="main-container"></div>
+
+<div class="home-link-container">
+  <a href="index.html" class="home-link">&larr; 返回首頁</a>
+</div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <a class="lightbox-nav prev">&#10094;</a>
+  <img class="lightbox-content" id="lightbox-img">
+  <div id="lightbox-caption"></div>
+  <a class="lightbox-nav next">&#10095;</a>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const pageTitleEl = document.getElementById('page-title');
+    const mainContainer = document.getElementById('main-container');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.querySelector('.lightbox-close');
+
+    let currentGallery = [];
+    let currentIndex = 0;
+
+    fetch('memorial_config.json')
+        .then(response => {
+            if (!response.ok) { throw new Error(`HTTP error! Status: ${response.status}`); }
+            return response.json();
+        })
+        .then(config => {
+            pageTitleEl.textContent = config.page_title || '追思紀念';
+            document.title = config.page_title || '追思紀念';
+
+            config.sections.forEach((section, index) => {
+                const collapsibleDiv = document.createElement('div');
+                collapsibleDiv.className = 'collapsible';
+
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'collapsible-btn';
+                btn.textContent = section.title;
+
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'collapsible-content';
+
+                const sectionEl = document.createElement('section');
+                
+                if (section.type === 'photos' && section.photo_list) {
+                    const galleryGrid = document.createElement('div');
+                    galleryGrid.className = 'gallery-grid';
+                    const galleryPhotos = section.photo_list;
+
+                    galleryPhotos.forEach((photo, photoIndex) => {
+                        const figure = document.createElement('figure');
+                        const img = document.createElement('img');
+                        img.src = photo.src;
+                        img.alt = photo.caption || section.title;
+                        img.addEventListener('click', () => openLightbox(galleryPhotos, photoIndex));
+                        
+                        const figcaption = document.createElement('figcaption');
+                        figcaption.textContent = photo.caption || '';
+
+                        figure.appendChild(img);
+                        figure.appendChild(figcaption);
+                        galleryGrid.appendChild(figure);
+                    });
+                    sectionEl.appendChild(galleryGrid);
+                } else if (section.type === 'videos' && section.video_list) {
+                    const videoContainer = document.createElement('div');
+                    videoContainer.className = 'video-container';
+                    section.video_list.forEach(video => {
+                        const videoItem = document.createElement('div');
+                        videoItem.className = 'video-item';
+
+                        if(video.caption) {
+                            const caption = document.createElement('p');
+                            caption.textContent = video.caption;
+                            videoItem.appendChild(caption);
+                        }
+                        
+                        const embedWrapper = document.createElement('div');
+                        embedWrapper.className = 'video-embed-wrapper';
+
+                        if (video.video_type === 'local' && video.src) {
+                            const extension = video.src.split('.').pop().toLowerCase();
+                            const mimeType = extension === 'mov' ? 'video/quicktime' : 'video/mp4';
+                            embedWrapper.innerHTML = `
+                                <video controls preload="metadata">
+                                    <source src="${video.src}" type="${mimeType}">
+                                    您的瀏覽器不支援 HTML5 影片。
+                                </video>
+                            `;
+                        } else if (video.video_type === 'embed' && video.embed_code) {
+                            embedWrapper.innerHTML = video.embed_code;
+                        }
+
+                        videoItem.appendChild(embedWrapper);
+                        videoContainer.appendChild(videoItem);
+                    });
+                    sectionEl.appendChild(videoContainer);
+                }
+                contentDiv.appendChild(sectionEl);
+                collapsibleDiv.appendChild(btn);
+                collapsibleDiv.appendChild(contentDiv);
+                mainContainer.appendChild(collapsibleDiv);
+            });
+
+            const coll = document.getElementsByClassName("collapsible-btn");
+            for (let i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+
+            // Open the first collapsible section by default
+            if (coll.length > 0) {
+                coll[0].click(); // Simulate a click on the first button
+            }
+        })
+        .catch(error => {
+            console.error('Error loading memorial config:', error);
+            mainContainer.innerHTML = `<p style="color:red; text-align:center;">網頁設定檔載入失敗: ${error.message}</p>`;
+        });
+
+    // --- Lightbox Functionality ---
+    function openLightbox(gallery, index) {
+        currentGallery = gallery;
+        currentIndex = index;
+        lightbox.style.display = 'flex';
+        showImage(currentIndex);
+    }
+
+    function showImage(index) {
+        if (index >= currentGallery.length) { index = 0; }
+        if (index < 0) { index = currentGallery.length - 1; }
+        currentIndex = index;
+        const photo = currentGallery[currentIndex];
+        lightboxImg.src = photo.src;
+        lightboxCaption.textContent = photo.caption || '';
+    }
+
+    function changeImage(step) {
+        showImage(currentIndex + step);
+    }
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+    }
+
+    document.querySelector('.lightbox-nav.prev').addEventListener('click', () => changeImage(-1));
+    document.querySelector('.lightbox-nav.next').addEventListener('click', () => changeImage(1));
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) { closeLightbox(); }
+    });
+    document.addEventListener('keydown', (e) => {
+        if (lightbox.style.display === 'flex') {
+            if (e.key === 'ArrowLeft') { changeImage(-1); }
+            if (e.key === 'ArrowRight') { changeImage(1); }
+            if (e.key === 'Escape') { closeLightbox(); }
+        }
+    });
+});
+</script>
+
+</body>
+</html>
