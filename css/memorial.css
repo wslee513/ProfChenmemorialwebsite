@@ -1,0 +1,89 @@
+  header h1 {
+    margin: 0; /* Keep margin:0 to override global h1 margin-bottom */
+    color: #0056b3;
+    font-size: 2.5rem; /* Keep specific font size for this header */
+  }
+  
+  /* Collapsible Styles */
+  .collapsible-btn {
+    background-color: transparent;
+    color: #0056b3;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 1px solid #0056b3;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    position: relative;
+  }
+  .collapsible-btn:hover, .collapsible-btn.active {
+    background-color: #e0e0e0;
+    color: #004494;
+  }
+  .collapsible-btn::after {
+    content: '+';
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .collapsible-btn.active::after {
+    content: '−';
+  }
+  .collapsible-content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: transparent;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+  }
+
+  section { background-color: #fff; margin-bottom: 0; padding: 30px; border-radius: 8px; box-shadow: none; }
+  section h2 {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 10px;
+    margin-top: 0; /* Keep this specific override */
+  }
+  
+  /* Gallery Styles */
+  .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+  .gallery-grid figure { margin: 0; }
+  .gallery-grid img { width: 100%; border-radius: 5px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+  .gallery-grid img:hover { transform: scale(1.05); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+  .gallery-grid figcaption { font-size: 0.9rem; color: #555; text-align: center; padding-top: 8px; }
+
+  /* Video Styles */
+  .video-container { display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 20px; }
+  .video-item p { margin: 0 0 10px 0; font-size: 1rem; color: #444; }
+  .video-embed-wrapper { position: relative; padding-top: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background-color: #000; }
+  .video-embed-wrapper iframe, .video-embed-wrapper video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+  /* Lightbox Styles */
+  .lightbox { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); flex-direction: column; justify-content: center; align-items: center; }
+  .lightbox-content { max-width: 85%; max-height: 75%; display: block; }
+  #lightbox-caption { margin-top: 15px; color: #fff; font-size: 1.1rem; text-align: center; padding: 0 20px; }
+  .lightbox-close { position: absolute; top: 15px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+  .lightbox-close:hover { color: #bbb; }
+  .lightbox-nav { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -50px; color: white; font-weight: bold; font-size: 30px; transition: 0.3s; user-select: none; border-radius: 0 3px 3px 0; }
+  .lightbox-nav.next { right: 0; }
+  .lightbox-nav.prev { left: 0; }
+  .lightbox-nav:hover { background-color: rgba(0,0,0,0.8); }
+  
+  /* Removed .home-link-container and .home-link styles as they are in style.css */
+
+  @media (max-width: 768px) {
+    header h1 { font-size: 2rem; } /* Keep specific font size for this header */
+    section { padding: 20px; }
+    .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+    .lightbox-content { max-width: 95%; max-height: 70%; }
+    /* Removed .home-link responsive styles as they are in style.css */
+  }

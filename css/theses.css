@@ -1,0 +1,127 @@
+/* Removed body styles as they are in style.css */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  h1 {
+    /* Removed color, border-bottom, padding-bottom, text-align, letting global h1 apply */
+    /* If specific styles are needed, they should be defined here */
+  }
+  .collapsible-btn {
+    background-color: transparent;
+    color: #0056b3;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 1px solid #0056b3;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    position: relative;
+  }
+  .collapsible-btn:hover, .collapsible-btn.active {
+    background-color: #f0f2f5;
+    color: #004494;
+  }
+  .collapsible-btn::after {
+    content: '+';
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .collapsible-btn.active::after {
+    content: '−';
+  }
+  .collapsible-content {
+    padding: 10px 18px;
+    display: none;
+    overflow: hidden;
+    background-color: transparent;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+  }
+  .tribute-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    background-color: #fff;
+  }
+  .tribute-card h3 {
+    margin-top: 0; /* Keep this specific override */
+    color: #343a40;
+  }
+  .tribute-card p {
+    white-space: pre-wrap;
+    line-height: 1.6;
+  }
+  .tribute-card .author {
+    text-align: right;
+    font-style: italic;
+    color: #6c757d;
+  }
+  .tribute-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  .theses-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  .theses-table th, .theses-table td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: left;
+  }
+  .theses-table th {
+    background-color: #e9ecef;
+    font-weight: 600;
+  }
+  .theses-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  .theses-table tbody tr:hover {
+    background-color: #e2e6ea;
+    cursor: pointer;
+  }
+  .summary-count {
+    text-align: center;
+    font-weight: bold;
+    color: #6c757d;
+    margin: 10px 0;
+  }
+  .publications-list {
+    list-style-type: decimal;
+    padding: 20px;
+    margin: 0;
+  }
+  .publications-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  /* Removed .home-link-container and .home-link styles as they are in style.css */
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+    .theses-table th, .theses-table td {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+    /* Removed .home-link responsive styles as they are in style.css */
+  }

@@ -1,0 +1,133 @@
+/* Base styles for overall consistency */
+html, body {
+    height: 100%;
+    margin: 0;
+    /* Standardized font-family across all pages */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: #333;
+    /* Standardized background color for all pages */
+    background-color: #f0f2f5;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* General heading styles */
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50; /* A dark, consistent color for headings */
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.page-title {
+    font-size: 2.5rem; /* Standardized h1 size */
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #3498db; /* More prominent separator */
+    margin-bottom: 1.5rem;
+    color: #2c3e50; /* Explicitly set color */
+    margin-top: 0; /* Ensure no top margin */
+}
+
+p {
+    font-size: 1rem; /* Standardized paragraph size */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Styles for the homepage hero section */
+.top-section {
+  height: 50vh;
+  background-image: url('../cover.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-color: #333;
+  position: relative;
+}
+.bottom-section {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background-color: #f4f4f9;
+  position: relative; /* For counter positioning */
+}
+
+/* Homepage specific button styles */
+.button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cta-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #e67e22; /* Consistent button color */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  min-width: 180px;
+}
+.cta-button:hover {
+  background-color: #d35400;
+}
+#view-counter {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Common styles for navigation/home links */
+.home-link-container {
+    text-align: center;
+    padding: 20px 0;
+}
+.home-link {
+    display: inline-block; /* Ensure padding and margin work */
+    color: #3498db; /* Consistent link color */
+    text-decoration: none;
+    font-size: 1.1rem; /* Slightly smaller than CTA buttons */
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid #3498db; /* Add a subtle border */
+}
+.home-link:hover {
+    color: #fff;
+    background-color: #3498db;
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .top-section { height: 40vh; }
+  .bottom-section { min-height: 60vh; padding: 20px 15px; }
+  h1 { font-size: 2rem; margin-bottom: 1rem; } /* Adjust h1 for mobile */
+  p { font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .button-container { flex-direction: column; gap: 15px; width: 100%; }
+  .cta-button { width: 90%; max-width: 300px; margin: 0 auto; padding: 12px 20px; font-size: 1.1rem; }
+  #view-counter {
+      position: static;
+      text-align: center;
+      width: 100%;
+      padding: 10px 0;
+      margin-top: 20px;
+  }
+  .home-link {
+      padding: 8px 12px;
+      font-size: 1rem;
+  }
+}
